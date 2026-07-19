@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HumanityU &mdash; Track &middot; Measure &middot; Restore Earth</title>
+  <meta name="description" content="A civilization-scale platform empowering you to measure, reduce, and restore your impact on Earth's water, atmosphere, and land systems. Join the global conservation mission." />
+  <meta name="theme-color" content="#E0F2FE" />
+  <meta property="og:title" content="HumanityU &mdash; Track &middot; Measure &middot; Restore Earth" />
+  <meta property="og:description" content="Scientific-grade environmental impact tracking. Measure your water, carbon, and earth footprint. Compete on a global leaderboard. Join 34 active crisis zones." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://humanityu.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HumanityU &mdash; Track &middot; Measure &middot; Restore Earth" />
+  <meta name="twitter:description" content="Scientific environmental impact tracking for global citizens. Measure. Rank. Restore." />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F0F9FF; --surface: #FFFEF7; --card: #FFFFFF;
+      --border: rgba(147,197,253,0.55); --border-gold: rgba(234,179,8,0.22);
+      --primary: #0369A1; --primary-lt: #0EA5E9; --accent: #0891B2;
+      --gold: #B45309; --gold-lt: #D97706; --gold-pale: #FEF9C3;
+      --water: #0891B2; --water-lt: #38BDF8; --air: #1D4ED8;
+      --earth: #15803D; --danger: #B91C1C;
+      --text: #0C1A2E; --text-sec: #334155; --text-muted: #64748B;
+      --radius-sm: 8px; --radius-md: 12px; --radius-lg: 18px; --radius-full: 100px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 70% 55% at 82% -5%, rgba(253,224,71,0.28) 0%, rgba(251,191,36,0.12) 35%, transparent 65%),
+        radial-gradient(ellipse 60% 60% at -10% 40%, rgba(56,189,248,0.20) 0%, rgba(14,165,233,0.08) 45%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 50% 55%, rgba(255,251,235,0.90) 0%, transparent 65%),
+        linear-gradient(170deg, #E0F2FE 0%, #FFFEF0 28%, #F0FDFA 60%, #EFF6FF 100%);
+      background-attachment: fixed;
+      color: var(--text); line-height: 1.6; font-size: 16px; overflow-x: hidden;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 30% at 25% 15%, rgba(253,224,71,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 75% 70%, rgba(56,189,248,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 25% at 55% 90%, rgba(16,185,129,0.08) 0%, transparent 55%);
+      pointer-events: none; z-index: 0;
+      animation: sacredShimmer 10s ease-in-out infinite alternate;
+    }
+    @keyframes sacredShimmer {
+      0% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.015); }
+      100% { opacity: 0.75; transform: scale(1); }
+    }
+    body > * { position: relative; z-index: 1; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+    .gradient-text {
+      background: linear-gradient(100deg, var(--primary) 0%, var(--water-lt) 60%, var(--gold-lt) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(240,249,255,0.82);
+      backdrop-filter: blur(20px) saturate(1.6);
+      -webkit-backdrop-filter: blur(20px) saturate(1.6);
+      border-bottom: 1px solid rgba(147,197,253,0.45);
+      box-shadow: 0 2px 20px rgba(14,165,233,0.08);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px; max-width: 1040px; margin: 0 auto; padding: 0 24px;
+    }
+    .topbar-logo { display: flex; align-items: center; gap: 10px; }
+    .topbar-logo-icon {
+      width: 34px; height: 34px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--primary), var(--water-lt));
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+      box-shadow: 0 2px 8px rgba(3,105,161,0.25);
+    }
+    .topbar-logo-name { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .topbar-links { display: flex; align-items: center; gap: 28px; }
+    .topbar-links a { font-size: 14px; color: var(--text-sec); transition: color 0.2s; }
+    .topbar-links a:hover { color: var(--primary); }
+    .topbar-cta {
+      background: var(--primary) !important; color: #fff !important;
+      font-size: 13px !important; font-weight: 600;
+      padding: 7px 16px; border-radius: var(--radius-full);
+      box-shadow: 0 2px 10px rgba(3,105,161,0.30);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s !important;
+    }
+    .topbar-cta:hover { background: var(--primary-lt) !important; box-shadow: 0 4px 16px rgba(14,165,233,0.40) !important; transform: translateY(-1px); }
+    .hero { padding: 148px 0 108px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 900px; height: 640px;
+      background: radial-gradient(ellipse 55% 55% at 50% 35%, rgba(253,224,71,0.22) 0%, rgba(56,189,248,0.18) 35%, rgba(14,165,233,0.06) 60%, transparent 75%);
+      pointer-events: none; animation: heroGlow 8s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow { 0% { opacity: 0.7; transform: translateX(-50%) scale(1); } 100% { opacity: 1; transform: translateX(-50%) scale(1.06); } }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(14,165,233,0.10); border: 1px solid rgba(14,165,233,0.30);
+      border-radius: var(--radius-full); padding: 5px 14px;
+      font-size: 12px; font-weight: 600; color: var(--primary);
+      letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px; background: var(--gold-lt); border-radius: 50%;
+      animation: pulse 2s infinite; box-shadow: 0 0 6px rgba(217,119,6,0.60);
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+    .hero h1 { font-size: clamp(36px,6vw,68px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; color: var(--text); margin-bottom: 12px; }
+    .hero-sub { font-size: clamp(14px,2vw,18px); color: var(--gold); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 28px; }
+    .hero-desc { max-width: 580px; margin: 0 auto 48px; font-size: clamp(15px,2vw,18px); color: var(--text-sec); line-height: 1.75; }
+    .download-group { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #0A0A0A; border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 14px; padding: 12px 20px 12px 16px; min-width: 175px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.24), 0 1px 4px rgba(0,0,0,0.16), inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s, border-color 0.2s; cursor: pointer;
+    }
+    .dl-btn:hover { background: #1C1C1E; border-color: rgba(255,255,255,0.22); box-shadow: 0 8px 32px rgba(0,0,0,0.30), 0 2px 8px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .dl-btn:active { transform: translateY(0px); }
+    .dl-btn-icon { flex-shrink: 0; width: 28px; height: 34px; display: flex; align-items: center; justify-content: center; }
+    .dl-btn-text { text-align: left; }
+    .dl-btn-pre { font-size: 10px; color: rgba(255,255,255,0.60); letter-spacing: 0.2px; line-height: 1; margin-bottom: 4px; }
+    .dl-btn-name { font-size: 17px; font-weight: 700; color: #FFFFFF; line-height: 1.1; letter-spacing: -0.3px; }
+    .hero-note { font-size: 12px; color: var(--text-muted); }
+    .stats-bar {
+      background: rgba(255,254,247,0.88); border-top: 1px solid rgba(253,224,71,0.28);
+      border-bottom: 1px solid rgba(147,197,253,0.40); padding: 32px 0;
+      backdrop-filter: blur(12px); box-shadow: 0 4px 24px rgba(251,191,36,0.08);
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+    .stat-item { text-align: center; padding: 8px 16px; border-right: 1px solid rgba(147,197,253,0.40); }
+    .stat-item:last-child { border-right: none; }
+    .stat-val { font-size: clamp(24px,3vw,36px); font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; text-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+    .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .section { padding: 96px 0; }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+    .section-title { font-size: clamp(28px,4vw,42px); font-weight: 800; letter-spacing: -0.8px; line-height: 1.15; color: var(--text); margin-bottom: 16px; }
+    .section-desc { max-width: 540px; margin: 0 auto; font-size: 17px; color: var(--text-sec); line-height: 1.65; }
+    .features-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .feature-card {
+      background: rgba(255,255,255,0.80); border: 1px solid rgba(147,197,253,0.50);
+      border-radius: var(--radius-lg); padding: 32px; position: relative; overflow: hidden;
+      backdrop-filter: blur(10px); box-shadow: 0 2px 16px rgba(14,165,233,0.07);
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .feature-card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(3,105,161,0.14), 0 0 0 1px rgba(3,105,161,0.10); }
+    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; opacity: 0; transition: opacity 0.25s; }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-card.water::before     { background: linear-gradient(90deg, var(--water), var(--water-lt)); }
+    .feature-card.air::before       { background: linear-gradient(90deg, var(--air), #60A5FA); }
+    .feature-card.earth::before     { background: linear-gradient(90deg, var(--earth), #4ADE80); }
+    .feature-card.map::before       { background: linear-gradient(90deg, var(--danger), #F87171); }
+    .feature-card.ranks::before     { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); }
+    .feature-card.community::before { background: linear-gradient(90deg, var(--primary), var(--primary-lt)); }
+    .feature-card.advisor::before   { background: linear-gradient(90deg, var(--accent), var(--water-lt)); }
+    .feature-card.streaks::before   { background: linear-gradient(90deg, #7C3AED, #A78BFA); }
+    .feature-icon { width: 52px; height: 52px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+    .feature-card.water     .feature-icon { background: rgba(8,145,178,0.12); }
+    .feature-card.air       .feature-icon { background: rgba(29,78,216,0.10); }
+    .feature-card.earth     .feature-icon { background: rgba(21,128,61,0.12); }
+    .feature-card.map       .feature-icon { background: rgba(185,28,28,0.10); }
+    .feature-card.ranks     .feature-icon { background: rgba(180,83,9,0.10); }
+    .feature-card.community .feature-icon { background: rgba(3,105,161,0.10); }
+    .feature-card.advisor   .feature-icon { background: rgba(8,145,178,0.10); }
+    .feature-card.streaks   .feature-icon { background: rgba(124,58,237,0.10); }
+    .feature-title { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .feature-desc  { font-size: 14px; color: var(--text-sec); line-height: 1.65; margin-bottom: 16px; }
+    .feature-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-full); letter-spacing: 0.2px; }
+    .tag-water   { background: rgba(8,145,178,0.12); color: var(--water); }
+    .tag-air     { background: rgba(29,78,216,0.10); color: var(--air); }
+    .tag-earth   { background: rgba(21,128,61,0.12); color: var(--earth); }
+    .tag-gold    { background: rgba(180,83,9,0.10); color: var(--gold); }
+    .tag-danger  { background: rgba(185,28,28,0.10); color: var(--danger); }
+    .tag-primary { background: rgba(3,105,161,0.10); color: var(--primary); }
+    .tag-accent  { background: rgba(8,145,178,0.10); color: var(--accent); }
+    .tag-purple  { background: rgba(124,58,237,0.10); color: #7C3AED; }
+    .science-section {
+      background: radial-gradient(ellipse 70% 50% at 10% 50%, rgba(56,189,248,0.14) 0%, transparent 60%), radial-gradient(ellipse 55% 50% at 90% 20%, rgba(253,224,71,0.14) 0%, transparent 55%), rgba(255,254,247,0.72);
+      border-top: 1px solid rgba(147,197,253,0.40); border-bottom: 1px solid rgba(253,224,71,0.22); backdrop-filter: blur(8px);
+    }
+    .science-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .science-content .section-title { text-align: left; }
+    .science-content .section-desc  { margin: 0 0 32px; text-align: left; max-width: none; }
+    .science-list { display: flex; flex-direction: column; gap: 16px; }
+    .science-item { display: flex; align-items: flex-start; gap: 14px; }
+    .science-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 7px; flex-shrink: 0; box-shadow: 0 0 6px rgba(8,145,178,0.40); }
+    .science-item-text { font-size: 15px; color: var(--text-sec); line-height: 1.6; }
+    .science-item-text strong { color: var(--text); }
+    .crisis-cards { display: flex; flex-direction: column; gap: 12px; }
+    .crisis-card { background: rgba(255,255,255,0.80); border: 1px solid rgba(147,197,253,0.50); border-radius: var(--radius-md); padding: 16px 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 1px 8px rgba(14,165,233,0.07); backdrop-filter: blur(6px); }
+    .crisis-severity { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .sev-critical { background: var(--danger); box-shadow: 0 0 8px rgba(185,28,28,0.45); }
+    .sev-high     { background: #D97706; box-shadow: 0 0 8px rgba(217,119,6,0.35); }
+    .sev-medium   { background: #B45309; }
+    .crisis-info { flex: 1; }
+    .crisis-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .crisis-stat { font-size: 12px; color: var(--text-muted); }
+    .crisis-badge { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.3px; }
+    .badge-critical { background: rgba(185,28,28,0.10); color: var(--danger); }
+    .badge-high     { background: rgba(217,119,6,0.12); color: #D97706; }
+    .badge-medium   { background: rgba(180,83,9,0.10); color: var(--gold); }
+    .leaderboard-section { background: radial-gradient(ellipse 60% 45% at 75% 20%, rgba(253,224,71,0.15) 0%, transparent 55%), radial-gradient(ellipse 50% 55% at 15% 70%, rgba(56,189,248,0.12) 0%, transparent 55%), transparent; }
+    .lb-card { background: rgba(255,255,255,0.82); border: 1px solid rgba(147,197,253,0.55); border-radius: var(--radius-lg); overflow: hidden; max-width: 680px; margin: 0 auto; box-shadow: 0 4px 28px rgba(14,165,233,0.10); backdrop-filter: blur(12px); }
+    .lb-header { background: rgba(240,249,255,0.90); border-bottom: 1px solid rgba(147,197,253,0.40); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .lb-title { font-size: 15px; font-weight: 700; color: var(--text); }
+    .lb-tier-chips { display: flex; gap: 6px; }
+    .lb-chip { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: var(--radius-full); background: rgba(186,230,253,0.45); color: var(--text-muted); }
+    .lb-chip.active { background: var(--primary); color: #fff; }
+    .lb-row { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-bottom: 1px solid rgba(147,197,253,0.28); transition: background 0.15s; }
+    .lb-row:last-child { border-bottom: none; }
+    .lb-row:hover { background: rgba(14,165,233,0.05); }
+    .lb-rank { width: 28px; font-size: 14px; font-weight: 700; text-align: center; color: var(--text-muted); }
+    .lb-rank.gold-rank   { color: var(--gold); }
+    .lb-rank.silver-rank { color: #94A3B8; }
+    .lb-rank.bronze-rank { color: #CD7F32; }
+    .lb-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #fff; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .lb-info { flex: 1; }
+    .lb-name   { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .lb-region { font-size: 11px; color: var(--text-muted); }
+    .lb-score  { text-align: right; }
+    .lb-score-val   { font-size: 15px; font-weight: 700; color: var(--primary); }
+    .lb-score-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .mission-section { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(253,224,71,0.18) 0%, rgba(56,189,248,0.14) 45%, transparent 70%), rgba(255,254,247,0.80); border-top: 1px solid rgba(253,224,71,0.25); text-align: center; padding: 96px 0; backdrop-filter: blur(8px); }
+    .mission-quote { font-size: clamp(20px,3.5vw,32px); font-weight: 700; line-height: 1.4; color: var(--text); max-width: 700px; margin: 0 auto 40px; letter-spacing: -0.5px; }
+    .mission-quote em { font-style: normal; background: linear-gradient(90deg, var(--water), var(--earth)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .download-section { padding: 96px 0; text-align: center; }
+    .download-section .download-group { margin: 40px auto; }
+    footer { background: rgba(255,254,247,0.90); border-top: 1px solid rgba(147,197,253,0.45); padding: 40px 0; backdrop-filter: blur(12px); box-shadow: 0 -2px 20px rgba(251,191,36,0.07); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { display: flex; align-items: center; gap: 10px; }
+    .footer-logo-icon { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--water-lt)); display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(3,105,161,0.25); }
+    .footer-logo-name { font-size: 15px; font-weight: 700; color: var(--text); }
+    .footer-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(147,197,253,0.35); }
+    @media (max-width: 768px) {
+      .topbar-links .hide-mobile { display: none; }
+      .hero { padding: 110px 0 72px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .science-grid { grid-template-columns: 1fr; gap: 40px; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-top: 1px solid rgba(147,197,253,0.35); }
+      .stat-item:nth-child(4) { border-top: 1px solid rgba(147,197,253,0.35); border-right: none; }
+      .lb-tier-chips { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .dl-btn { min-width: 155px; }
+      .section { padding: 64px 0; }
+      .lb-row { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-logo">
+      <div class="topbar-logo-icon">&#x1F4A7;</div>
+      <span class="topbar-logo-name">HumanityU</span>
+    </div>
+    <div class="topbar-links">
+      <a href="#features" class="hide-mobile">Features</a>
+      <a href="#leaderboard" class="hide-mobile">Leaderboard</a>
+      <a href="mailto:atsanik.llc@gmail.com" class="hide-mobile">Support</a>
+      <a href="#download" class="topbar-cta">Download Free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Global Launch &middot; iOS &amp; Android
+    </div>
+    <h1><span class="gradient-text">Track. Measure.</span><br />Restore Earth.</h1>
+    <p class="hero-sub">Track &middot; Measure &middot; Restore Earth</p>
+    <p class="hero-desc">A scientific-grade platform for measuring your real environmental footprint across water, atmosphere, and land systems &mdash; and competing on a global leaderboard with conservationists worldwide.</p>
+    <div class="download-group" id="download">
+      <a class="dl-btn" href="#" title="Download HumanityU on the App Store" aria-label="Download HumanityU on the App Store">
+        <span class="dl-btn-icon"><svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8 1.2C13.8 1.2 15.2 4.8 11.6 6.4C11.6 6.4 10.0 2.8 13.8 1.2Z" fill="#FFFFFF" opacity="0.85"/><path d="M18.4 8.2C17.0 6.6 15.1 5.7 13.2 5.7C11.6 5.7 10.5 6.4 9.6 6.4C8.7 6.4 7.5 5.7 5.8 5.7C3.2 5.7 0.4 7.9 0.4 12.4C0.4 15.2 1.5 18.2 3.0 20.3C4.2 22.1 5.5 23.7 7.2 23.7C8.8 23.7 9.6 22.7 11.5 22.7C13.4 22.7 14.1 23.7 15.8 23.7C17.5 23.7 18.7 22.1 19.9 20.2C20.8 18.9 21.3 17.5 21.5 16.8C19.9 16.1 18.2 14.6 18.2 12.1C18.2 9.9 19.6 8.5 20.4 7.9C19.4 6.5 18.4 8.2 18.4 8.2Z" fill="#FFFFFF"/></svg></span>
+        <div class="dl-btn-text"><div class="dl-btn-pre">Download on the</div><div class="dl-btn-name">App Store</div></div>
+      </a>
+      <a class="dl-btn" href="#" title="Get HumanityU on Google Play" aria-label="Get HumanityU on Google Play">
+        <span class="dl-btn-icon"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 28L14.5 15L1.5 2V28Z" fill="#34A853"/><path d="M1.5 2L14.5 15L20.5 9L8 1.2L1.5 2Z" fill="#FBBC04"/><path d="M1.5 28L14.5 15L20.5 21L8 28.8L1.5 28Z" fill="#EA4335"/><path d="M14.5 15L20.5 9L24.5 11.6C25.9 12.4 25.9 13.6 24.5 14.4L20.5 21L14.5 15Z" fill="#4285F4"/></svg></span>
+        <div class="dl-btn-text"><div class="dl-btn-pre">Get it on</div><div class="dl-btn-name">Google Play</div></div>
+      </a>
+    </div>
+    <p class="hero-note">Free &middot; No ads &middot; No data selling &middot; Ages 13+</p>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-val" style="color:var(--water);">34</div><div class="stat-label">Active Crisis Zones</div></div>
+      <div class="stat-item"><div class="stat-val" style="color:var(--gold);">10</div><div class="stat-label">Ranking Categories</div></div>
+      <div class="stat-item"><div class="stat-val" style="color:var(--earth);">5</div><div class="stat-label">Planetary Elements</div></div>
+      <div class="stat-item"><div class="stat-val" style="color:var(--primary);">3</div><div class="stat-label">Element Calculators</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Platform Features</p>
+      <h2 class="section-title">Everything you need to<br /><span class="gradient-text">take real action</span></h2>
+      <p class="section-desc">Scientific precision tools, global community, and AI-powered insights &mdash; built for the conservation generation.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card water"><div class="feature-icon">&#x1F4A7;</div><h3 class="feature-title">Water Calculator</h3><p class="feature-desc">Precisely measure your household water footprint across showers, laundry, diet, garden, and vehicle use. Every number you enter is a scientifically verifiable data point.</p><div class="feature-tags"><span class="tag tag-water">Gallons Saved</span><span class="tag tag-water">Daily Log</span><span class="tag tag-water">7-Day Trends</span></div></div>
+      <div class="feature-card air"><div class="feature-icon">&#x1F32C;&#xFE0F;</div><h3 class="feature-title">Air &amp; Carbon Calculator</h3><p class="feature-desc">Track your CO&#8322; footprint from transport, energy use, diet, and waste. Understand your contribution to the atmosphere with real-time rank feedback after each entry.</p><div class="feature-tags"><span class="tag tag-air">kg CO&#8322; Reduced</span><span class="tag tag-air">Transport</span><span class="tag tag-air">Energy</span></div></div>
+      <div class="feature-card map"><div class="feature-icon">&#x1F5FA;&#xFE0F;</div><h3 class="feature-title">Interactive Crisis Map</h3><p class="feature-desc">Explore 34 active environmental crises mapped worldwide &mdash; classified by element and severity. Each zone shows a 7-day sparkline trend chart and live community activity heatmap.</p><div class="feature-tags"><span class="tag tag-danger">34 Crisis Zones</span><span class="tag tag-danger">Severity Trends</span><span class="tag tag-danger">Alerts</span></div></div>
+      <div class="feature-card earth"><div class="feature-icon">&#x1F333;</div><h3 class="feature-title">Earth Restoration Calculator</h3><p class="feature-desc">Log tree planting, soil restoration, and land conservation actions. Includes bioregion-specific guides for native species planting across 7 global zones.</p><div class="feature-tags"><span class="tag tag-earth">Trees Planted</span><span class="tag tag-earth">7 Bioregions</span><span class="tag tag-earth">Soil Health</span></div></div>
+      <div class="feature-card ranks"><div class="feature-icon">&#x1F3C6;</div><h3 class="feature-title">Global Leaderboard</h3><p class="feature-desc">See exactly where you rank worldwide, by continent, country, and conservation region. Compete on 10 scientific categories including gallons saved, kg CO&#8322; reduced, and Civilization Score.</p><div class="feature-tags"><span class="tag tag-gold">10 Categories</span><span class="tag tag-gold">4 Geo Tiers</span><span class="tag tag-gold">Top Streaks</span></div></div>
+      <div class="feature-card community"><div class="feature-icon">&#x1F91D;</div><h3 class="feature-title">Community Action Feed</h3><p class="feature-desc">Share text updates about conservation actions. Posts are AI-screened before publishing, and photo/video uploads stay disabled until moderated media review ships.</p><div class="feature-tags"><span class="tag tag-primary">AI Moderated</span><span class="tag tag-primary">Region Filter</span><span class="tag tag-primary">Events</span></div></div>
+      <div class="feature-card advisor"><div class="feature-icon">&#x1F916;</div><h3 class="feature-title">AI Conservation Advisor</h3><p class="feature-desc">Ask any environmental question and receive expert streaming responses. AI-curated crisis news keeps you informed with urgency-classified headlines.</p><div class="feature-tags"><span class="tag tag-accent">Streaming Q&amp;A</span><span class="tag tag-accent">Crisis News</span><span class="tag tag-accent">Starter Prompts</span></div></div>
+      <div class="feature-card streaks"><div class="feature-icon">&#x1F525;</div><h3 class="feature-title">Daily Streaks &amp; Alerts</h3><p class="feature-desc">Build a daily habit with streak tracking, milestone badges at 7, 30, and 100 days, and smart push notifications. Crisis zone alerts fire instantly when a critical region worsens near you.</p><div class="feature-tags"><span class="tag tag-purple">Streak Badges</span><span class="tag tag-purple">Crisis Alerts</span><span class="tag tag-purple">Weekly Digest</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section science-section">
+  <div class="container">
+    <div class="science-grid">
+      <div class="science-content">
+        <p class="section-eyebrow">Scientific Integrity</p>
+        <h2 class="section-title">Real data.<br /><span class="gradient-text">Real impact.</span></h2>
+        <p class="section-desc">Every number on the leaderboard comes from real user input through the in-app calculators &mdash; not estimates, AI guesses, or pre-filled values. Entries are self-reported.</p>
+        <div class="science-list">
+          <div class="science-item"><div class="science-dot"></div><p class="science-item-text"><strong>Calculator-only metrics</strong> &mdash; gallons, CO&#8322;, trees. Gamification never inflates scientific scores.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--earth);box-shadow:0 0 6px rgba(21,128,61,0.4);"></div><p class="science-item-text"><strong>Data attribution</strong> &mdash; all statistics sourced from NOAA, WHO, NASA, UN, FAO. Full reference log in-app.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--gold-lt);box-shadow:0 0 6px rgba(217,119,6,0.4);"></div><p class="science-item-text"><strong>Offline resilience</strong> &mdash; failed submissions queue locally and auto-retry when connectivity restores.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--danger);box-shadow:0 0 6px rgba(185,28,28,0.4);"></div><p class="science-item-text"><strong>Crisis zone alerts</strong> &mdash; when a critical crisis worsens in your region, you receive an immediate push notification.</p></div>
+        </div>
+      </div>
+      <div class="crisis-cards">
+        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">Amazon Basin Deforestation</div><div class="crisis-stat">17&ndash;20% threshold &mdash; 800M people at risk</div></div><span class="crisis-badge badge-critical">Critical</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">South Asian Groundwater Depletion</div><div class="crisis-stat">600M dependent &mdash; levels falling 1m/year</div></div><span class="crisis-badge badge-critical">Critical</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Great Barrier Reef Bleaching</div><div class="crisis-stat">91% bleached in 2024 &mdash; 1,500km affected</div></div><span class="crisis-badge badge-high">High</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Siberian Permafrost Thaw</div><div class="crisis-stat">1.5 trillion tons CO&#8322; equivalent at risk</div></div><span class="crisis-badge badge-high">High</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-medium"></div><div class="crisis-info"><div class="crisis-name">Mediterranean Basin Water Stress</div><div class="crisis-stat">40% below historical 20yr average</div></div><span class="crisis-badge badge-medium">Medium</span></div>
+        <div style="text-align:center;padding:12px 0;"><span style="font-size:12px;color:var(--text-muted);">+ 29 more crisis zones in-app &middot; Updated in real time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section leaderboard-section" id="leaderboard">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Global Competition</p>
+      <h2 class="section-title">See exactly where<br /><span class="gradient-text">you stand</span></h2>
+      <p class="section-desc">Filter by Global &middot; Continent &middot; Country &middot; Conservation Region. Compete on 10 scientific categories. Every calculator submission updates your live rank.</p>
+    </div>
+    <div class="lb-card">
+      <div class="lb-header">
+        <span class="lb-title">&#x1F30D; Global Leaderboard &mdash; Gallons Saved</span>
+        <div class="lb-tier-chips"><span class="lb-chip active">Global</span><span class="lb-chip">Continent</span><span class="lb-chip">Country</span><span class="lb-chip">Region</span></div>
+      </div>
+      <div class="lb-row"><div class="lb-rank gold-rank">&#x1F947;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#B45309,#D97706);">AK</div><div class="lb-info"><div class="lb-name">AquaKeeper</div><div class="lb-region">&#x1F1E7;&#x1F1F7; Amazon Basin &middot; South America</div></div><div class="lb-score"><div class="lb-score-val">48,320</div><div class="lb-score-label">gallons saved</div></div></div>
+      <div class="lb-row"><div class="lb-rank silver-rank">&#x1F948;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#0891B2,#0EA5E9);">RG</div><div class="lb-info"><div class="lb-name">RiverGuardian</div><div class="lb-region">&#x1F1EE;&#x1F1F3; Ganges-Brahmaputra &middot; Asia</div></div><div class="lb-score"><div class="lb-score-val">41,850</div><div class="lb-score-label">gallons saved</div></div></div>
+      <div class="lb-row"><div class="lb-rank bronze-rank">&#x1F949;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#15803D,#22C55E);">EW</div><div class="lb-info"><div class="lb-name">EcoWarrior</div><div class="lb-region">&#x1F1FA;&#x1F1F8; Great Lakes Region &middot; North America</div></div><div class="lb-score"><div class="lb-score-val">37,100</div><div class="lb-score-label">gallons saved</div></div></div>
+      <div class="lb-row"><div class="lb-rank">4</div><div class="lb-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">CS</div><div class="lb-info"><div class="lb-name">CoralSaver</div><div class="lb-region">&#x1F1E6;&#x1F1FA; Great Barrier Reef &middot; Oceania</div></div><div class="lb-score"><div class="lb-score-val">29,640</div><div class="lb-score-label">gallons saved</div></div></div>
+      <div class="lb-row"><div class="lb-rank">5</div><div class="lb-avatar" style="background:linear-gradient(135deg,#D97706,#EF4444);">SD</div><div class="lb-info"><div class="lb-name">SahelDefender</div><div class="lb-region">&#x1F1F3;&#x1F1EC; Niger River Basin &middot; Africa</div></div><div class="lb-score"><div class="lb-score-val">24,200</div><div class="lb-score-label">gallons saved</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="container">
+    <p class="mission-quote">&ldquo;Every measurement you log is a real step toward <em>planetary recovery</em>. Not an estimate. Not a promise. A commitment.&rdquo;</p>
+    <p style="font-size:15px;color:var(--text-muted);">&mdash; HumanityU Platform Mission</p>
+  </div>
+</section>
+
+<section class="download-section">
+  <div class="container">
+    <p class="section-eyebrow">Join the Mission</p>
+    <h2 class="section-title">Free. Scientific. Global.</h2>
+    <p class="section-desc" style="margin:16px auto 0;">No ads. No data selling. No estimates. Just real environmental measurements from real people.</p>
+    <div class="download-group">
+      <a class="dl-btn" href="#" title="Download HumanityU on the App Store" aria-label="Download HumanityU on the App Store">
+        <span class="dl-btn-icon"><svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8 1.2C13.8 1.2 15.2 4.8 11.6 6.4C11.6 6.4 10.0 2.8 13.8 1.2Z" fill="#FFFFFF" opacity="0.85"/><path d="M18.4 8.2C17.0 6.6 15.1 5.7 13.2 5.7C11.6 5.7 10.5 6.4 9.6 6.4C8.7 6.4 7.5 5.7 5.8 5.7C3.2 5.7 0.4 7.9 0.4 12.4C0.4 15.2 1.5 18.2 3.0 20.3C4.2 22.1 5.5 23.7 7.2 23.7C8.8 23.7 9.6 22.7 11.5 22.7C13.4 22.7 14.1 23.7 15.8 23.7C17.5 23.7 18.7 22.1 19.9 20.2C20.8 18.9 21.3 17.5 21.5 16.8C19.9 16.1 18.2 14.6 18.2 12.1C18.2 9.9 19.6 8.5 20.4 7.9C19.4 6.5 18.4 8.2 18.4 8.2Z" fill="#FFFFFF"/></svg></span>
+        <div class="dl-btn-text"><div class="dl-btn-pre">Download on the</div><div class="dl-btn-name">App Store</div></div>
+      </a>
+      <a class="dl-btn" href="#" title="Get HumanityU on Google Play" aria-label="Get HumanityU on Google Play">
+        <span class="dl-btn-icon"><svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 28L14.5 15L1.5 2V28Z" fill="#34A853"/><path d="M1.5 2L14.5 15L20.5 9L8 1.2L1.5 2Z" fill="#FBBC04"/><path d="M1.5 28L14.5 15L20.5 21L8 28.8L1.5 28Z" fill="#EA4335"/><path d="M14.5 15L20.5 9L24.5 11.6C25.9 12.4 25.9 13.6 24.5 14.4L20.5 21L14.5 15Z" fill="#4285F4"/></svg></span>
+        <div class="dl-btn-text"><div class="dl-btn-pre">Get it on</div><div class="dl-btn-name">Google Play</div></div>
+      </a>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);">iOS 16+ &middot; Android 10+ &middot; Ages 13+</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo"><div class="footer-logo-icon">&#x1F4A7;</div><span class="footer-logo-name">HumanityU</span></div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:atsanik.llc@gmail.com">Contact</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 HumanityU &middot; Built to inspire action at planetary scale &middot; <a href="privacy.html" style="color:var(--text-muted);">Privacy Policy</a> &middot; <a href="mailto:atsanik.llc@gmail.com" style="color:var(--text-muted);">atsanik.llc@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

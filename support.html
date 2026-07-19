@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HumanityU — Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #F0F9FF;
+      --surface: #FFFFFF;
+      --primary: #0369A1;
+      --text: #0C1A2E;
+      --text-muted: #64748B;
+      --border: #BAE6FD;
+      --success: #15803D;
+      --earth: #15803D;
+      --radius: 12px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 16px 48px;
+    }
+    header {
+      background: var(--primary);
+      margin: 0 -16px;
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    header p  { font-size: 14px; color: rgba(255,255,255,0.82); }
+
+    .container { max-width: 680px; margin: 0 auto; }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 28px 0 24px;
+      text-align: center;
+    }
+    .contact-card h2 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .contact-card p  { font-size: 15px; color: var(--text-muted); margin-bottom: 16px; }
+    .contact-card a  {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 15px; font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .contact-card a:hover { background: #075985; }
+
+    h2.section-title {
+      font-size: 18px; font-weight: 700;
+      color: var(--text);
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .faq-item h3 {
+      font-size: 15px; font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .faq-item p, .faq-item ol, .faq-item ul {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+    }
+    .faq-item ol, .faq-item ul { padding-left: 20px; margin-top: 6px; }
+    .faq-item li { margin-bottom: 4px; }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 480px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .info-card h4 { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .info-card p  { font-size: 13px; color: var(--text-muted); }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 HumanityU Support</h1>
+    <p>Track · Measure · Restore Earth</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>Contact Support</h2>
+      <p>We aim to respond to all inquiries within 48 hours.</p>
+      <a href="mailto:atsanik.llc@gmail.com">atsanik.llc@gmail.com</a>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How do I delete my account and all my data?</h3>
+      <p>To permanently delete your account and all associated data:</p>
+      <ol>
+        <li>Open HumanityU and go to the <strong>Profile</strong> tab.</li>
+        <li>Scroll to the bottom and tap <strong>Sign Out</strong>.</li>
+        <li>Email <a href="mailto:atsanik.llc@gmail.com">atsanik.llc@gmail.com</a> with the subject line <em>"Account Deletion Request"</em> and include your registered email address.</li>
+        <li>We will permanently delete your account and all data within <strong>30 days</strong> of receiving your request, as described in our <a href="https://humanityu.app/privacy">Privacy Policy</a>.</li>
+      </ol>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I export my environmental impact data?</h3>
+      <p>Go to <strong>Profile → Export My Impact</strong>. This generates a plain-text impact summary with your self-reported measurements (gallons saved, CO₂ reduced, trees planted, streak days, points, and Civilization Score) that you can share via the iOS/Android Share sheet.</p>
+      <p>For a formatted PDF certificate, tap <strong>Profile → Download PDF Certificate</strong> (requires an internet connection). If the PDF can't be generated, you'll be offered the plain-text summary instead.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I change my notification settings?</h3>
+      <p>Go to <strong>Profile → Notification Settings</strong>. You can individually toggle:</p>
+      <ul>
+        <li><strong>All Notifications</strong> — master on/off switch</li>
+        <li><strong>Daily Log Reminder</strong> — choose a custom time (7 AM–6 PM)</li>
+        <li><strong>Streak Alert</strong> — fires at 8 PM if you have not logged today</li>
+        <li><strong>Milestone Badges</strong> — celebrates streaks of 7, 30, and 100 days</li>
+        <li><strong>Weekly Impact Digest</strong> — every Sunday at 7 PM</li>
+        <li><strong>Crisis Zone Alerts</strong> — notifies when a critical crisis worsens in your region</li>
+      </ul>
+      <p>To fully disable notifications, use the <strong>All Notifications</strong> master switch or go to your device's system Settings → HumanityU → Notifications.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>My data did not sync — what happened?</h3>
+      <p>HumanityU includes an <strong>offline submission queue</strong>. If your device was offline when you submitted a calculator entry, it is automatically queued and retried when connectivity is restored.</p>
+      <p>You will see an amber <strong>Pending Sync</strong> banner on the Mission screen showing the number of queued items. Tap <strong>Sync Now</strong> to retry immediately, or wait for automatic retry when your connection restores.</p>
+      <p>If the banner persists after restoring connectivity, try closing and reopening the app. If the issue continues, contact support with your device model and iOS/Android version.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why is the app requesting location permission?</h3>
+      <p>HumanityU requests your location <strong>once</strong> to automatically set your Conservation Region, Country, and Continent — connecting you to regional leaderboards and local community posts.</p>
+      <p><strong>Important:</strong> Only your country, continent, and conservation region are stored on our servers. Your precise GPS coordinates are <em>never</em> saved or transmitted.</p>
+      <p>You can deny the location permission and set your location manually via the dropdowns in the <strong>Profile</strong> tab at any time.</p>
+    </div>
+
+    <!-- App Info -->
+    <h2 class="section-title">App Information</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Version</h4>
+        <p>HumanityU 1.0.0<br/>Available on iOS and Android</p>
+      </div>
+      <div class="info-card">
+        <h4>Data &amp; Privacy</h4>
+        <p>All data handling is described in our <a href="https://humanityu.app/privacy">Privacy Policy</a>.</p>
+      </div>
+      <div class="info-card">
+        <h4>Response Time</h4>
+        <p>Support emails answered within 48 hours on business days.</p>
+      </div>
+      <div class="info-card">
+        <h4>Data Sources</h4>
+        <p>All environmental statistics sourced from NOAA, WHO, NASA, UN, and IPCC public-domain data.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2026 HumanityU &nbsp;&middot;&nbsp;
+      <a href="https://humanityu.app">humanityu.app</a> &nbsp;&middot;&nbsp;
+      <a href="https://humanityu.app/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:atsanik.llc@gmail.com">atsanik.llc@gmail.com</a>
+    </p>
+  </footer>
+</body>
+</html>
