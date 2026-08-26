@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sources — HumanityU</title>
+  <style>
+    :root {
+      --bg: #F0F9FF; --surface: #FFFFFF; --card: #EFF6FF;
+      --border: #BAE6FD; --primary: #0369A1; --accent: #0891B2;
+      --gold: #B45309; --green: #15803D; --danger: #B91C1C;
+      --text: #0C1A2E; --text-sec: #334155; --text-muted: #64748B;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+    .header { border-bottom: 2px solid var(--border); padding-bottom: 32px; margin-bottom: 40px; }
+    .logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .logo-text { font-size: 22px; font-weight: 700; color: var(--text); }
+    .logo-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    h1 { font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .last-updated { font-size: 13px; color: var(--text-muted); }
+    section { margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-top: 20px; margin-bottom: 8px; }
+    p { color: var(--text-sec); margin-bottom: 12px; }
+    ul { color: var(--text-sec); padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--primary); }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th { background: var(--card); color: var(--text); font-weight: 600; padding: 10px 14px; text-align: left; border: 1px solid var(--border); }
+    .data-table td { color: var(--text-sec); padding: 9px 14px; border: 1px solid var(--border); vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: var(--card); }
+    .info-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; }
+    .info-card p { margin: 0; }
+    .info-card p + p { margin-top: 10px; }
+    .warning-card { background: rgba(180,83,9,0.07); border: 1px solid rgba(180,83,9,0.20); border-radius: var(--radius); padding: 14px 18px; margin: 16px 0; }
+    .warning-card p { margin: 0; color: var(--gold); font-size: 14px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.3px; }
+    .badge-ok { background: rgba(21,128,61,0.12); color: #15803D; }
+    .badge-warn { background: rgba(180,83,9,0.12); color: #B45309; }
+    .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
+    .footer p { font-size: 13px; color: var(--text-muted); margin: 0; }
+    @media (max-width: 600px) { h1 { font-size: 26px; } .container { padding: 32px 16px 60px; } .data-table { font-size: 12px; } .data-table th, .data-table td { padding: 7px 10px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="logo-row">
+      <div class="logo-icon">💧</div>
+      <div>
+        <div class="logo-text">HumanityU</div>
+        <div class="logo-sub">Track · Measure · Restore Earth</div>
+      </div>
+    </div>
+    <h1>Sources</h1>
+    <p class="last-updated">Last reviewed: August 25, 2026</p>
+  </div>
+
+  <section>
+    <h2>How we handle numbers</h2>
+    <p>Every environmental figure HumanityU displays comes from one of two places, and we keep them strictly separate.</p>
+    <div class="info-card">
+      <p><strong>Published measurements</strong> — figures about the state of the planet, taken from named scientific and governmental sources. We paraphrase them in our own words, name the publisher, and show the year the measurement refers to. We do not reproduce source text.</p>
+      <p><strong>Your own entries</strong> — the quantities you type into a calculator. These are <strong>self-reported estimates</strong>, converted using published factors listed below. They are labelled as self-reported wherever they appear, they are never presented as measured, and they are excluded from any public total.</p>
+    </div>
+    <p>Where we could not establish a source to the standard we set ourselves, our intention is to remove the figure rather than present it confidently. This page lists what we have and, just as importantly, what we do not.</p>
+  </section>
+
+  <section>
+    <h2>Planetary measurements</h2>
+    <p>These figures describe conditions on Earth. None of them is produced by HumanityU.</p>
+    <table class="data-table">
+      <thead><tr><th>Figure</th><th>Value</th><th>Publisher</th><th>Licence</th></tr></thead>
+      <tbody>
+        <tr><td>Atmospheric CO₂</td><td>422 ppm (2024 annual average)</td><td><a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA Mauna Loa Observatory</a></td><td>Public domain (US Gov)</td></tr>
+        <tr><td>Temperature rise</td><td>+1.45 °C (2024)</td><td><a href="https://wmo.int/publication-series/state-of-global-climate-2024" target="_blank" rel="noopener">WMO, State of the Global Climate 2024</a></td><td>Open access</td></tr>
+        <tr><td>Sea-level rise</td><td>101 mm</td><td><a href="https://sealevel.nasa.gov" target="_blank" rel="noopener">NASA Sea Level Change Portal</a></td><td>Public domain (US Gov)</td></tr>
+        <tr><td>Deaths from air pollution</td><td>7 million per year</td><td><a href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health" target="_blank" rel="noopener">WHO, Ambient Air Quality</a></td><td>Public domain (WHO)</td></tr>
+        <tr><td>People without safe water</td><td>2.2 billion</td><td><a href="https://www.who.int/publications/i/item/9789240060098" target="_blank" rel="noopener">WHO / UNICEF JMP 2023</a></td><td>Open access</td></tr>
+        <tr><td>Land degraded</td><td>40%</td><td><a href="https://www.unccd.int/resources/global-land-outlook" target="_blank" rel="noopener">UNCCD, Global Land Outlook 2022</a></td><td>Open access (UN)</td></tr>
+        <tr><td>Ocean plastic</td><td>14+ million tonnes per year</td><td><a href="https://www.unep.org/interactive/beat-plastic-pollution/" target="_blank" rel="noopener">UNEP, Beat Plastic Pollution</a></td><td>Open access (UN)</td></tr>
+        <tr><td>Deforestation</td><td>4.2 million hectares per year</td><td><a href="https://www.fao.org/forest-resources-assessment" target="_blank" rel="noopener">FAO, Forest Resources Assessment 2020</a></td><td>Open access (FAO)</td></tr>
+      </tbody>
+    </table>
+    <p>Additional sources used in regional content include the IUCN Red List, NSIDC, the World Glacier Monitoring Service (Zemp et al. 2019, <em>Nature</em>), Hallmann et al. 2017 (<em>PLOS ONE</em>, CC BY 4.0), Lovejoy &amp; Nobre 2018 (<em>Science Advances</em>), and AIMS reef monitoring.</p>
+  </section>
+
+  <section>
+    <h2>Conversion factors</h2>
+    <p>These turn a quantity you enter into an estimated figure. Each is an approximation that varies by location, season, equipment and method — naming a source is not a claim that the resulting number is accurate for you.</p>
+    <table class="data-table">
+      <thead><tr><th>Factor</th><th>Publisher</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Water footprints of foods</td><td>Hoekstra &amp; Mekonnen 2012, <em>PNAS</em></td><td><span class="badge badge-ok">Sourced</span></td></tr>
+        <tr><td>Household water rates (per flush, per load)</td><td>US EPA WaterSense</td><td><span class="badge badge-ok">Sourced</span></td></tr>
+        <tr><td>Car CO₂ per mile</td><td>US EPA Fuel Economy Guide</td><td><span class="badge badge-ok">Sourced</span></td></tr>
+        <tr><td>Diet carbon footprint</td><td>Poore &amp; Nemecek 2018, <em>Science</em></td><td><span class="badge badge-ok">Sourced</span></td></tr>
+        <tr><td>Electricity CO₂ per kWh</td><td><a href="https://ember-energy.org/latest-insights/global-electricity-review-2025/" target="_blank" rel="noopener">Ember, Global Electricity Review 2025</a></td><td><span class="badge badge-warn">US figure — see below</span></td></tr>
+        <tr><td>Bus and rail CO₂ per mile</td><td>Attributed to DEFRA averages in our source code; the specific publication has not been verified by us</td><td><span class="badge badge-warn">Unverified</span></td></tr>
+        <tr><td>Per-action savings estimates</td><td>None established</td><td><span class="badge badge-warn">Illustrative only</span></td></tr>
+      </tbody>
+    </table>
+    <div class="warning-card">
+      <p><strong>About the electricity factor.</strong> HumanityU applies a single United States figure — 384 grams of CO₂ per kWh, from Ember's Global Electricity Review — to every user, worldwide. Grid carbon intensity varies enormously: the global average is around 473 g, so for much of the world this <strong>understates</strong> emissions, while for a grid running largely on nuclear or hydro it <strong>overstates</strong> them. Within the United States alone, regional rates range from roughly 198 to 636 g. We are working on region-specific factors. Until then, treat any electricity figure as a rough order of magnitude, not a measurement of your household.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we do not claim</h2>
+    <ul>
+      <li><strong>Nothing in the app is verified, measured, audited or certified.</strong> Every quantity is one you typed in yourself.</li>
+      <li><strong>We make no offsetting, neutrality or compensation claim.</strong> No carbon credit is ever bought, retired or held on your behalf.</li>
+      <li><strong>We claim no environmental performance</strong> for the app or for your use of it, and we hold no sustainability certification.</li>
+      <li><strong>Naming a source does not imply endorsement.</strong> None of the organisations listed here is affiliated with HumanityU or has reviewed it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Maps and geography</h2>
+    <p>Map geometry is derived from <a href="https://www.naturalearthdata.com" target="_blank" rel="noopener">Natural Earth</a>, which is in the public domain. Topographic tiles are served by <a href="https://opentopomap.org/about" target="_blank" rel="noopener">OpenTopoMap</a> using OpenStreetMap data, available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.</p>
+  </section>
+
+  <section>
+    <h2>Corrections</h2>
+    <p>If you believe a figure here is wrong, out of date, or attributed incorrectly, tell us at <strong>support@humanityu.app</strong>. We would rather correct a number than defend it.</p>
+    <p>Scientific facts, government statistics and geographic data are not subject to copyright. All descriptive text, interface copy and design in HumanityU is original work.</p>
+  </section>
+
+  <div class="footer">
+    <p>© 2026 HumanityU — Atsanik LLC. All rights reserved.</p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="status.html">Status</a> · <a href="support.html">Support</a></p>
+  </div>
+
+</div>
+</body>
+</html>
