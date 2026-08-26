@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — HumanityU</title>
+  <style>
+    :root {
+      --bg: #F0F9FF; --surface: #FFFFFF; --card: #EFF6FF;
+      --border: #BAE6FD; --primary: #0369A1; --accent: #0891B2;
+      --gold: #B45309; --green: #15803D; --danger: #B91C1C;
+      --text: #0C1A2E; --text-sec: #334155; --text-muted: #64748B;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+    .container { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+    .header { border-bottom: 2px solid var(--border); padding-bottom: 32px; margin-bottom: 40px; }
+    .logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .logo-text { font-size: 22px; font-weight: 700; color: var(--text); }
+    .logo-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    h1 { font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .last-updated { font-size: 13px; color: var(--text-muted); }
+    section { margin-bottom: 40px; }
+    h2 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    h2 .section-num { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-top: 20px; margin-bottom: 8px; }
+    p { color: var(--text-sec); margin-bottom: 12px; }
+    ul, ol { color: var(--text-sec); padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--primary); }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .data-table th { background: var(--card); color: var(--text); font-weight: 600; padding: 10px 14px; text-align: left; border: 1px solid var(--border); }
+    .data-table td { color: var(--text-sec); padding: 9px 14px; border: 1px solid var(--border); vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: var(--card); }
+    .info-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; }
+    .info-card p { margin: 0; }
+    .info-card p + p { margin-top: 10px; }
+    .warning-card { background: rgba(180,83,9,0.07); border: 1px solid rgba(180,83,9,0.20); border-radius: var(--radius); padding: 14px 18px; margin: 16px 0; }
+    .warning-card p { margin: 0; color: var(--gold); font-size: 14px; }
+    .warning-card p + p { margin-top: 8px; }
+    .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
+    .footer p { font-size: 13px; color: var(--text-muted); margin: 0; }
+    .contact-block { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-top: 16px; display: inline-block; text-align: left; }
+    .contact-label { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+    .contact-value { font-size: 15px; color: var(--primary); font-weight: 600; }
+    .toc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 40px; }
+    .toc-title { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+    .toc ol { columns: 2; column-gap: 28px; margin: 0; padding-left: 18px; font-size: 14px; }
+    .toc li { margin-bottom: 3px; }
+    @media (max-width: 600px) { h1 { font-size: 26px; } .container { padding: 32px 16px 60px; } .data-table { font-size: 12px; } .data-table th, .data-table td { padding: 7px 10px; } .toc ol { columns: 1; } }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="logo-row">
+      <div class="logo-icon">💧</div>
+      <div>
+        <div class="logo-text">HumanityU</div>
+        <div class="logo-sub">Track · Measure · Restore Earth</div>
+      </div>
+    </div>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: August 25, 2026 &nbsp;·&nbsp; Effective: August 25, 2026</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Who you are agreeing with</a></li>
+      <li><a href="#s2">Who may use HumanityU</a></li>
+      <li><a href="#s3">Your account</a></li>
+      <li><a href="#s4">What HumanityU is — and is not</a></li>
+      <li><a href="#s5">Environmental information and claims</a></li>
+      <li><a href="#s6">Price, payment and refunds</a></li>
+      <li><a href="#s7">Acceptable use</a></li>
+      <li><a href="#s8">Objectionable content</a></li>
+      <li><a href="#s9">Your content and the license you grant</a></li>
+      <li><a href="#s10">Moderation, reporting and blocking</a></li>
+      <li><a href="#s11">Complaints and redress</a></li>
+      <li><a href="#s12">Copyright and takedown</a></li>
+      <li><a href="#s13">Sources and attribution</a></li>
+      <li><a href="#s14">Third parties and non-affiliation</a></li>
+      <li><a href="#s15">Availability and changes</a></li>
+      <li><a href="#s16">Ending this agreement</a></li>
+      <li><a href="#s17">Disclaimers</a></li>
+      <li><a href="#s18">Limitation of liability</a></li>
+      <li><a href="#s19">Apple App Store terms</a></li>
+      <li><a href="#s20">Google Play terms</a></li>
+      <li><a href="#s21">Governing law and disputes</a></li>
+      <li><a href="#s22">Changes to these Terms</a></li>
+      <li><a href="#s23">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
+    <h2><span class="section-num">1</span>Who you are agreeing with</h2>
+    <p>These Terms of Service (the "Terms") are a binding agreement between you and <strong>Atsanik LLC</strong>, a limited liability company formed in Wyoming, United States ("we", "us", "our"), covering the HumanityU mobile application and the pages at humanityu.app (together, the "Service").</p>
+    <p>By creating an account or using the Service, you accept these Terms. If you do not accept them, do not create an account.</p>
+    <div class="info-card"><p><strong>Plain-language summary, which is not a substitute for the Terms below:</strong> HumanityU is a private record of environmental actions you report yourself. You own what you write. We host and display it, and we moderate it — we do not sell it, advertise against it, or use it to train AI models. The app makes no claim that your figures are verified, because they are not. You can delete your account inside the app at any time.</p></div>
+  </section>
+
+  <section id="s2">
+    <h2><span class="section-num">2</span>Who may use HumanityU</h2>
+    <p>You must be at least <strong>13 years old</strong>. If you are under the age of majority where you live, you may use the Service only with the involvement of a parent or legal guardian who agrees to these Terms on your behalf.</p>
+    <p>HumanityU is not directed to children under 13 and we do not knowingly collect personal information from them. If you believe a child under 13 has created an account, contact <strong>support@humanityu.app</strong> and we will delete it.</p>
+    <p>You may not use the Service if you are barred from doing so under applicable law, including United States export-control and sanctions law.</p>
+    <p>HumanityU is for individuals. Accounts are personal, and you may not share, sell, or transfer your account.</p>
+  </section>
+
+  <section id="s3">
+    <h2><span class="section-num">3</span>Your account</h2>
+    <p>Signing in requires both a password and a one-time code sent to your verified email address. Keep your password and your email account secure; you are responsible for activity under your account.</p>
+    <p>Choose a username that is not misleading, offensive, or impersonating. We may require a change to any username that breaches these Terms.</p>
+    <p>Tell us promptly at <strong>support@humanityu.app</strong> if you believe your account has been accessed without your permission.</p>
+  </section>
+
+  <section id="s4">
+    <h2><span class="section-num">4</span>What HumanityU is — and is not</h2>
+    <p>HumanityU lets you record environmental actions you have taken, converts the quantities you enter into estimated figures, shows information about environmental conditions in different regions with the source named, and provides a text-based community space.</p>
+    <div class="warning-card">
+      <p><strong>Nothing in the Service is verified, measured, audited, or certified.</strong> Every quantity is one that you typed in yourself. The app converts those quantities using published conversion factors. It does not measure anything, does not read any sensor, and does not check whether an action happened.</p>
+      <p>Figures shown to you are <strong>estimates derived from your own reports</strong>. They are not evidence of environmental benefit and must not be presented as such by you or by us.</p>
+    </div>
+    <p>The Service is provided for personal information and personal record-keeping. It is not professional, scientific, engineering, legal, financial, or regulatory advice, and it must not be relied on for compliance, reporting, disclosure, offsetting, accreditation, or any decision with legal or financial consequences.</p>
+    <p>Region information in the Service, including any map, is illustrative and generalized. It is not a survey, a boundary determination, or a statement about any specific property.</p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="section-num">5</span>Environmental information and claims</h2>
+    <p>We take this section seriously because environmental claims are easy to inflate and hard to undo.</p>
+    <ul>
+      <li><strong>We make no environmental performance claim</strong> about the Service, about your use of it, or about any outcome from an action you log.</li>
+      <li><strong>We claim no certification, accreditation, seal, or third-party verification</strong> of any figure the app displays, and the Service carries no sustainability label.</li>
+      <li><strong>We make no offsetting, neutrality, or compensation claim.</strong> Where earlier versions of the app used the word "offset", it referred only to an arithmetic estimate of a reduction you reported — no carbon credit was ever bought, retired, or held on your behalf, and no emission was ever compensated.</li>
+      <li><strong>Figures are not comparative.</strong> Nothing in the Service asserts that you, or any group, performed better environmentally than anyone else.</li>
+      <li><strong>Conversion factors come from third-party publications</strong> and are approximations that vary by location, season, equipment, and method. Where we name a source, we name it so you can check it; naming a source is not a claim that the resulting figure is accurate for you.</li>
+    </ul>
+    <p>If you republish figures from the Service — in a post, a document, or a public statement — you must describe them as self-reported estimates. You may not present them as measured, verified, audited, or certified results.</p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="section-num">6</span>Price, payment and refunds</h2>
+    <p>HumanityU is a <strong>paid app: a single purchase</strong>, made through the Apple App Store or Google Play. There are no in-app purchases, no subscriptions, no advertising, and nothing further to buy inside the app.</p>
+    <p><strong>Payment and refunds are handled by the store you bought from, not by us.</strong> We do not process your payment, and we do not receive your payment-card details. Refund requests go to Apple or to Google under their own policies and timescales.</p>
+    <p>Buying HumanityU purchases access to an app. <strong>It does not buy environmental impact, verification, ranking, visibility, or influence of any kind.</strong> No payment to us can change what your record says or how it is treated.</p>
+    <h3>If you are a consumer in the EU, EEA or United Kingdom</h3>
+    <p>You have a statutory right to withdraw from a distance purchase of digital content, normally within 14 days. That right is exercised through the store that sold you the app, and it may be lost once download or performance has begun with your express consent and acknowledgement — the store presents that consent at purchase.</p>
+    <p>You also have statutory rights if digital content does not conform to what was described, including rights to have it brought into conformity or to a price reduction or termination. <strong>Nothing in these Terms limits those rights.</strong></p>
+  </section>
+
+  <section id="s7">
+    <h2><span class="section-num">7</span>Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>post or transmit content that is unlawful, harassing, threatening, hateful, defamatory, deceptive, sexually explicit, or that exploits or endangers a minor;</li>
+      <li>impersonate another person or misrepresent your affiliation with anyone;</li>
+      <li>submit knowingly false records, or manipulate figures to misrepresent what you did;</li>
+      <li>attempt to access another user's account, data, or record;</li>
+      <li>probe, scan, overload, or interfere with the Service or its infrastructure, or bypass any rate limit, security control, or feature restriction;</li>
+      <li>reverse engineer, decompile, or modify the app except to the extent that applicable law expressly permits it and forbids us to prevent it;</li>
+      <li>scrape, harvest, or bulk-extract data from the Service, or use automated means to create accounts or submit entries;</li>
+      <li>use the Service to advertise, solicit, or promote a product, service, campaign, or organization;</li>
+      <li>infringe anyone's intellectual property or privacy rights;</li>
+      <li>use the Service for any unlawful purpose or in breach of any applicable law.</li>
+    </ul>
+    <p>We may suspend or terminate access for a breach of this section. Where the breach is serious, that may be immediate.</p>
+  </section>
+
+  <section id="s8">
+    <h2><span class="section-num">8</span>Objectionable content</h2>
+    <p><strong>Objectionable content is not permitted on HumanityU.</strong> This includes content that is abusive, harassing, hateful, threatening, violent, obscene, sexually explicit, discriminatory, that promotes self-harm or illegal activity, that endangers or sexualises a minor, or that a reasonable person would find offensive.</p>
+    <p>We use the following measures, and we consider them a minimum rather than a boast:</p>
+    <ul>
+      <li><strong>Automated pre-screening.</strong> Text posts and comments are screened before publication. Screening is designed to fail closed: if the check cannot complete, the content is not published.</li>
+      <li><strong>Reporting.</strong> Every post and comment can be reported from inside the app.</li>
+      <li><strong>Blocking.</strong> You can block another user, which removes their content from your view and prevents interaction.</li>
+      <li><strong>Removal.</strong> We remove content that breaches these Terms and may suspend or terminate the account responsible.</li>
+      <li><strong>Published contact.</strong> You can always reach a human at <strong>support@humanityu.app</strong>.</li>
+    </ul>
+    <p>We aim to review reports promptly and to act on serious reports — those involving a credible threat, child safety, or an immediate risk of harm — as a priority ahead of all other work. We are a very small operation and we will not promise a response time we cannot keep; we will tell you what we have done.</p>
+    <p>Screening is imperfect. Automated screening will sometimes allow content it should have caught and will sometimes block content it should have allowed. Section 11 explains how to challenge either outcome.</p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="section-num">9</span>Your content and the license you grant</h2>
+    <p><strong>You own your content.</strong> Your posts, comments, and the entries in your record remain yours. We claim no ownership of them.</p>
+    <p>So that we can operate the Service, you grant us a <strong>limited, non-exclusive, worldwide, royalty-free license to host, store, back up, reproduce, transmit, and display your content — solely for the purposes of running, securing, and moderating the Service</strong>, and to make it visible to other users where you chose to post it publicly. The license lasts as long as your content is on the Service, plus a short period while backups and caches expire.</p>
+    <div class="info-card">
+      <p><strong>What this license explicitly does not include.</strong> We do not have the right to use your content for advertising, marketing, or promotion; to sell or license it to a third party; to <strong>train, fine-tune, or evaluate any machine-learning or artificial-intelligence model</strong>; or to publish it outside the Service. If we ever want to do any of those things, we will ask you first and you will be free to say no.</p>
+      <p>Content is sent to a third-party model provider for the sole purpose of safety screening at the moment you submit it, and for answering questions you choose to ask the in-app advisor. That processing is transient and the provider does not retain it. See the <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+    <p>You are responsible for what you post, and you confirm that you have the rights to post it. Do not post other people's writing, photographs, or other work without permission.</p>
+    <p>Deleting a post removes it from the Service. Deleting your account removes your content — see Section 16.</p>
+    <p><strong>Feedback</strong> you send us voluntarily may be used to improve the Service without obligation or payment. Feedback is not treated as confidential, so please do not include anything sensitive in it.</p>
+    <p>The app itself — its software, design, text, and branding — belongs to us or our licensors. Your purchase is a license to use the app on devices you own or control, as permitted by the store's rules; it does not transfer any ownership.</p>
+  </section>
+
+  <section id="s10">
+    <h2><span class="section-num">10</span>Moderation, reporting and blocking</h2>
+    <p>This section describes, as plainly as we can, the restrictions we place on content and how moderation decisions are made.</p>
+    <h3>10.1 What can be restricted</h3>
+    <p>Content that breaches Section 7 or Section 8 may be blocked before publication, removed after publication, or held for review. An account may be limited, suspended, or terminated. Rate limits apply to posting and to submissions, to protect the Service from abuse.</p>
+    <h3>10.2 How decisions are made</h3>
+    <p><strong>Automated screening.</strong> Text is checked automatically before publication, using both a rule-based filter and a third-party language model. The check runs on the text you submit and on nothing else. If the check cannot complete, publication is refused rather than allowed.</p>
+    <p><strong>Human review.</strong> Reports from users are reviewed by a person. Decisions to suspend or terminate an account are made by a person, not automatically.</p>
+    <h3>10.3 If your content is restricted</h3>
+    <p>We will tell you inside the app that the content was not published or was removed, and give the reason in plain language, along with what you can do next. We will not remove content silently.</p>
+    <h3>10.4 Reporting and blocking</h3>
+    <p>Use the report control on any post or comment, or email <strong>support@humanityu.app</strong> if something needs urgent attention or if you cannot reach the in-app control. Reports may be made whether or not you are the person affected. Use the block control to stop seeing and interacting with a specific user.</p>
+    <p>We take deliberate misuse of the reporting system seriously and may restrict accounts that make repeated bad-faith reports.</p>
+  </section>
+
+  <section id="s11">
+    <h2><span class="section-num">11</span>Complaints and redress</h2>
+    <p>If you believe we have made the wrong decision — removing your content, refusing to publish it, restricting your account, or declining to act on your report — you may complain to <strong>support@humanityu.app</strong> for at least <strong>six months</strong> after the decision.</p>
+    <p>Tell us what was decided, why you think it was wrong, and anything we should look at. A person will review it. We will not treat your complaint as resolved simply because an automated check produced the original outcome, and if we were wrong we will reinstate the content and say so.</p>
+    <p>If we cannot resolve your complaint, you keep every other route open to you, including any out-of-court dispute-settlement body certified in your country, any competent authority, and the courts (Section 21). Nothing here removes a right you have by law.</p>
+    <div class="warning-card"><p><strong>Honest note on scale.</strong> HumanityU is operated by a very small company. We have deliberately committed above to a complaint route, human review, and a stated reason for every restriction — because those protect you regardless of our size. We have not promised a formal service-level response time, because promising one we could not keep would be worse than not promising it.</p></div>
+  </section>
+
+  <section id="s12">
+    <h2><span class="section-num">12</span>Copyright and takedown</h2>
+    <p>We respect copyright and we expect the same. Do not post material you do not have the right to post.</p>
+    <h3>12.1 Reporting infringement</h3>
+    <p>If you believe content on the Service infringes your copyright, send a written notice to our designated agent that includes: your signature (electronic is fine); identification of the work; identification of the material and where to find it; your contact details; a statement that you believe in good faith the use is not authorized; and a statement, under penalty of perjury, that the information is accurate and that you are the owner or authorized to act for them.</p>
+    <div class="contact-block">
+      <div class="contact-label">Designated Copyright Agent</div>
+      <div class="contact-value">Copyright Agent, Atsanik LLC</div>
+      <br/>
+      <div class="contact-label">Postal address</div>
+      <div class="contact-value">1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801</div>
+      <br/>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">support@humanityu.app</div>
+    </div>
+    <h3>12.2 What we do</h3>
+    <p>On receiving a valid notice we will remove or disable the material and notify the person who posted it, with a copy of the notice.</p>
+    <h3>12.3 Counter-notice</h3>
+    <p>If your content was removed and you believe that was a mistake or a misidentification, you may send a counter-notice to the agent above, including: your signature; identification of the removed material and where it appeared; a statement, under penalty of perjury, that you believe in good faith it was removed by mistake or misidentification; and your contact details, with consent to the jurisdiction of the federal court for your address (or, if outside the United States, for the district where we may be found) and to accept service from the person who complained. We may restore the material after the period the law provides, unless the complainant tells us they have filed a court action.</p>
+    <p>Knowingly making a false statement in a notice or counter-notice carries legal liability, including for damages and costs.</p>
+    <h3>12.4 Repeat infringers</h3>
+    <p>We terminate the accounts of repeat infringers.</p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="section-num">13</span>Sources and attribution</h2>
+    <p>Environmental information in the Service is <strong>paraphrased in our own words from public sources</strong>, with the publisher named and the year of the measurement shown where we have it. We do not reproduce source text. Where we could not establish a source to the standard we set ourselves, our intention is to remove the figure rather than present it confidently.</p>
+    <p>Map geometry, tiles, and licensed data are attributed in the app and on our sources page. Naming a source does not imply that the source endorses HumanityU. If you hold rights in material you believe we have used incorrectly, contact <strong>support@humanityu.app</strong> and we will correct or remove it.</p>
+  </section>
+
+  <section id="s14">
+    <h2><span class="section-num">14</span>Third parties and non-affiliation</h2>
+    <p>The Service relies on third-party providers for hosting, authentication, safety screening, map tiles, and push notifications. Their terms apply to their part of the service, and we are not responsible for their acts or omissions. The <a href="privacy.html">Privacy Policy</a> names them.</p>
+    <p><strong>Non-affiliation.</strong> HumanityU is an independent product of Atsanik LLC. Where we name an organization, agency, publication, or dataset, we do so to identify a source or to point you to public information. <strong>We are not affiliated with, endorsed by, sponsored by, or acting on behalf of any of them.</strong> Third-party names and marks belong to their owners.</p>
+    <p>Links out of the app open in your browser and lead to pages we do not control.</p>
+  </section>
+
+  <section id="s15">
+    <h2><span class="section-num">15</span>Availability and changes</h2>
+    <p>We aim to keep the Service available but cannot promise uninterrupted service. Maintenance, provider outages, and faults happen.</p>
+    <p>We may add, change, or remove features. <strong>If we remove a feature you have been using, we will say so — in the app and on our status page — rather than letting it disappear quietly.</strong> A feature that is temporarily unavailable will be labeled as temporarily unavailable, not hidden.</p>
+    <p>We may require you to update to a current version where an older one is insecure or no longer compatible with our systems.</p>
+  </section>
+
+  <section id="s16">
+    <h2><span class="section-num">16</span>Ending this agreement</h2>
+    <h3>16.1 You</h3>
+    <p>You may stop using the Service at any time, and you may <strong>delete your account from inside the app</strong>, in your profile. Deletion removes your account and the data associated with it. If you prefer, email <strong>support@humanityu.app</strong> with the subject "Delete My Account" and we will complete it within 30 days.</p>
+    <p>You may request an export of your record before deleting it. Deletion is permanent and we cannot restore a deleted account.</p>
+    <h3>16.2 Us</h3>
+    <p>We may suspend or terminate your access if you breach these Terms, if it is necessary to protect other users or the Service, or if we are required to by law. Where it is lawful and practical to do so, we will tell you why and explain how to complain under Section 11.</p>
+    <p>If we discontinue the Service entirely, we will give reasonable notice and a period to export your record.</p>
+    <h3>16.3 Afterwards</h3>
+    <p>Sections 5, 9 (as to content already licensed), 12, 13, 14, 17, 18, 21 and 23 continue to apply after this agreement ends.</p>
+  </section>
+
+  <section id="s17">
+    <h2><span class="section-num">17</span>Disclaimers</h2>
+    <p>The Service is provided <strong>"as is" and "as available"</strong>. To the fullest extent permitted by law, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.</p>
+    <p>We do not warrant that the Service will be uninterrupted or error-free, that figures it displays are accurate for your circumstances, that conversion factors are current, that region information is complete, or that moderation will catch every breach.</p>
+    <p>We are not responsible for content posted by other users.</p>
+    <div class="info-card"><p><strong>If you are a consumer</strong>, you have legal rights that cannot be excluded — including, in the EU, EEA and UK, rights relating to conformity of digital content, and in some jurisdictions statutory guarantees. This section does not limit any of them. Where a warranty cannot lawfully be excluded, it applies for the shortest period the law permits.</p></div>
+  </section>
+
+  <section id="s18">
+    <h2><span class="section-num">18</span>Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, exemplary, or punitive damages, nor for lost profits, lost data, or loss of goodwill, arising from your use of the Service.</p>
+    <p>Our total liability arising out of or relating to these Terms or the Service is limited to <strong>the greater of the amount you paid for the app or ten United States dollars</strong>.</p>
+    <div class="warning-card"><p><strong>What is never excluded.</strong> Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, for fraud or fraudulent misrepresentation, for gross negligence or wilful misconduct, or for anything else that cannot lawfully be excluded or limited — including, for consumers, liability under mandatory consumer-protection law and, where applicable, under Article 82 of the GDPR.</p></div>
+    <p>You agree to indemnify us against claims arising from content you posted or from your breach of these Terms. This does not apply where you are a consumer and the law does not permit it.</p>
+  </section>
+
+  <section id="s19">
+    <h2><span class="section-num">19</span>Apple App Store terms</h2>
+    <p>If you obtained the app from the Apple App Store, the following apply and, to the extent of any conflict with the rest of these Terms, prevail in respect of that copy.</p>
+    <ol>
+      <li><strong>Two parties only.</strong> These Terms are between you and Atsanik LLC. <strong>Apple is not a party.</strong></li>
+      <li><strong>License scope.</strong> Your license is a non-transferable license to use the app on any Apple-branded device you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions, including Family Sharing where applicable.</li>
+      <li><strong>Maintenance and support.</strong> Atsanik LLC is solely responsible for maintenance and support. <strong>Apple has no obligation whatsoever</strong> to furnish any maintenance or support services.</li>
+      <li><strong>Warranty.</strong> Atsanik LLC is solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. If the app fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price to you; to the maximum extent permitted by law, Apple has <strong>no other warranty obligation</strong> with respect to the app, and any other claims, losses, liabilities, damages, costs, or expenses attributable to a failure to conform to any warranty are the sole responsibility of Atsanik LLC.</li>
+      <li><strong>Product claims.</strong> Atsanik LLC, not Apple, is responsible for addressing any claims relating to the app or your possession or use of it, including product liability claims, any claim that the app fails to conform to a legal or regulatory requirement, and claims arising under consumer-protection, privacy, or similar legislation.</li>
+      <li><strong>Intellectual property.</strong> If a third party claims the app or your use of it infringes their intellectual property, Atsanik LLC, not Apple, is solely responsible for the investigation, defense, settlement, and discharge of that claim.</li>
+      <li><strong>Legal compliance.</strong> You represent and warrant that you are not located in a country subject to a United States Government embargo or designated as a terrorist-supporting country, and that you are not listed on any United States Government list of prohibited or restricted parties.</li>
+      <li><strong>Developer contact.</strong> Questions, complaints, and claims relating to the app should be directed to Atsanik LLC at <strong>support@humanityu.app</strong>, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801.</li>
+      <li><strong>Third-party terms.</strong> You must comply with applicable third-party terms of agreement when using the app.</li>
+      <li><strong>Third-party beneficiary.</strong> You acknowledge and agree that <strong>Apple and Apple's subsidiaries are third-party beneficiaries of this Section 19</strong>, and that upon your acceptance of these Terms, Apple has the right (and is deemed to have accepted the right) to enforce this Section against you as a third-party beneficiary.</li>
+    </ol>
+  </section>
+
+  <section id="s20">
+    <h2><span class="section-num">20</span>Google Play terms</h2>
+    <p>If you obtained the app from Google Play, your use is also subject to the Google Play Terms of Service. <strong>Google is not a party to these Terms</strong> and is not responsible for the app. Purchases, refunds, and billing questions are handled by Google under its policies. Atsanik LLC alone is responsible for the app, its content, and support.</p>
+  </section>
+
+  <section id="s21">
+    <h2><span class="section-num">21</span>Governing law and disputes</h2>
+    <p>These Terms are governed by the laws of the State of Wyoming, United States, excluding its conflict-of-laws rules.</p>
+    <div class="info-card"><p><strong>If you are a consumer</strong>, this choice of law does not deprive you of the protection of the mandatory consumer-protection law of your country of residence, and you may bring proceedings in the courts of that country. We may bring proceedings against a consumer only in the courts of the consumer's country of residence.</p></div>
+    <p><strong>We do not require you to give up your right to go to court.</strong> There is no mandatory arbitration clause in these Terms and no class-action waiver. You may bring a claim in small-claims court where one is available to you.</p>
+    <p>Before starting formal proceedings, we ask — but do not require — that you contact <strong>support@humanityu.app</strong> so we can try to resolve the matter directly. Most problems are faster to fix than to litigate.</p>
+    <p>EU and EEA consumers may also use the out-of-court dispute-settlement bodies available in their country. Contacting such a body does not affect your right to go to court.</p>
+  </section>
+
+  <section id="s22">
+    <h2><span class="section-num">22</span>Changes to these Terms</h2>
+    <p>We may update these Terms. If a change is material, we will give notice in the app or by email <strong>at least 14 days before it takes effect</strong>, and the "Last updated" date above will change.</p>
+    <p>If you do not accept a change, stop using the Service and delete your account before the change takes effect. Continuing to use the Service after that date means you accept the updated Terms. We will not apply a material change retroactively to something you did beforehand.</p>
+    <p>These Terms, together with the <a href="privacy.html">Privacy Policy</a>, are the whole agreement between us about the Service. If any provision is unenforceable, the rest continues to apply. Our not enforcing a provision on one occasion is not a waiver of it.</p>
+  </section>
+
+  <section id="s23">
+    <h2><span class="section-num">23</span>Contact</h2>
+    <div class="contact-block">
+      <div class="contact-label">All enquiries, complaints and reports</div>
+      <div class="contact-value">support@humanityu.app</div>
+      <br/>
+      <div class="contact-label">Legal notices</div>
+      <div class="contact-value">Atsanik LLC · 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801</div>
+      <br/>
+      <div class="contact-label">Website</div>
+      <div class="contact-value"><a href="https://humanityu.app" target="_blank">humanityu.app</a></div>
+    </div>
+    <p style="margin-top:16px;">We aim to respond to enquiries within <strong>5 business days</strong>, and to prioritise reports involving safety or an immediate risk of harm ahead of everything else.</p>
+  </section>
+
+  <div class="footer">
+    <p>© 2026 HumanityU — Atsanik LLC. All rights reserved.</p>
+    <p style="margin-top:6px;"><a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a> · <a href="child-safety.html">Child Safety</a> · <a href="delete-account.html">Delete Account</a></p>
+    <p style="margin-top:6px;">Hosted at <a href="https://humanityu.app/terms">humanityu.app/terms</a></p>
+  </div>
+
+</div>
+</body>
+</html>
