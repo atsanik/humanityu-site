@@ -1,18 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HumanityU &mdash; Track &middot; Measure &middot; Restore Earth</title>
-  <meta name="description" content="A civilization-scale platform empowering you to measure, reduce, and restore your impact on Earth's water, atmosphere, and land systems. Join the global conservation mission." />
+  <meta name="description" content="Take real action for the planet, starting at home. Measure your impact on Earth's water, atmosphere, and land systems. Join the global conservation mission." />
   <meta name="theme-color" content="#E0F2FE" />
   <meta property="og:title" content="HumanityU &mdash; Track &middot; Measure &middot; Restore Earth" />
-  <meta property="og:description" content="Scientific-grade environmental impact tracking. Measure your water, carbon, and earth footprint. Compete on a global leaderboard. Join 34 active crisis zones." />
+  <meta property="og:description" content="Take real action for the planet, starting at home. Every action you log stays in your own record, and every zone is backed by a cited source." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://humanityu.app" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="HumanityU &mdash; Track &middot; Measure &middot; Restore Earth" />
-  <meta name="twitter:description" content="Scientific environmental impact tracking for global citizens. Measure. Rank. Restore." />
+  <meta name="twitter:description" content="Take real action for the planet, starting at home. Track your water, air, and land footprint honestly." />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -217,16 +217,12 @@
     .lb-row { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-bottom: 1px solid rgba(147,197,253,0.28); transition: background 0.15s; }
     .lb-row:last-child { border-bottom: none; }
     .lb-row:hover { background: rgba(14,165,233,0.05); }
-    .lb-rank { width: 28px; font-size: 14px; font-weight: 700; text-align: center; color: var(--text-muted); }
-    .lb-rank.gold-rank   { color: var(--gold); }
-    .lb-rank.silver-rank { color: #94A3B8; }
-    .lb-rank.bronze-rank { color: #CD7F32; }
-    .lb-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #fff; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .lb-rank { width: 28px; font-size: 18px; text-align: center; }
     .lb-info { flex: 1; }
     .lb-name   { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
     .lb-region { font-size: 11px; color: var(--text-muted); }
     .lb-score  { text-align: right; }
-    .lb-score-val   { font-size: 15px; font-weight: 700; color: var(--primary); }
+    .lb-score-val   { font-size: 13px; font-weight: 700; color: var(--primary); }
     .lb-score-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
     .mission-section { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(253,224,71,0.18) 0%, rgba(56,189,248,0.14) 45%, transparent 70%), rgba(255,254,247,0.80); border-top: 1px solid rgba(253,224,71,0.25); text-align: center; padding: 96px 0; backdrop-filter: blur(8px); }
     .mission-quote { font-size: clamp(20px,3.5vw,32px); font-weight: 700; line-height: 1.4; color: var(--text); max-width: 700px; margin: 0 auto 40px; letter-spacing: -0.5px; }
@@ -271,9 +267,9 @@
     </div>
     <div class="topbar-links">
       <a href="#features" class="hide-mobile">Features</a>
-      <a href="#leaderboard" class="hide-mobile">Leaderboard</a>
+      <a href="#record" class="hide-mobile">Your Record</a>
       <a href="mailto:support@humanityu.app" class="hide-mobile">Support</a>
-      <a href="#download" class="topbar-cta">Download Free</a>
+      <a href="#download" class="topbar-cta">Get the App</a>
     </div>
   </div>
 </nav>
@@ -286,7 +282,7 @@
     </div>
     <h1><span class="gradient-text">Track. Measure.</span><br />Restore Earth.</h1>
     <p class="hero-sub">Track &middot; Measure &middot; Restore Earth</p>
-    <p class="hero-desc">A scientific-grade platform for measuring your real environmental footprint across water, atmosphere, and land systems &mdash; and competing on a global leaderboard with conservationists worldwide.</p>
+    <p class="hero-desc">Measure your real environmental footprint across water, atmosphere, and land systems &mdash; and act on it, starting at home. Every action you log stays in your own record, backed by cited sources.</p>
     <div class="download-group" id="download">
       <a class="dl-btn" href="#" title="Download HumanityU on the App Store" aria-label="Download HumanityU on the App Store">
         <span class="dl-btn-icon"><svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8 1.2C13.8 1.2 15.2 4.8 11.6 6.4C11.6 6.4 10.0 2.8 13.8 1.2Z" fill="#FFFFFF" opacity="0.85"/><path d="M18.4 8.2C17.0 6.6 15.1 5.7 13.2 5.7C11.6 5.7 10.5 6.4 9.6 6.4C8.7 6.4 7.5 5.7 5.8 5.7C3.2 5.7 0.4 7.9 0.4 12.4C0.4 15.2 1.5 18.2 3.0 20.3C4.2 22.1 5.5 23.7 7.2 23.7C8.8 23.7 9.6 22.7 11.5 22.7C13.4 22.7 14.1 23.7 15.8 23.7C17.5 23.7 18.7 22.1 19.9 20.2C20.8 18.9 21.3 17.5 21.5 16.8C19.9 16.1 18.2 14.6 18.2 12.1C18.2 9.9 19.6 8.5 20.4 7.9C19.4 6.5 18.4 8.2 18.4 8.2Z" fill="#FFFFFF"/></svg></span>
@@ -297,7 +293,7 @@
         <div class="dl-btn-text"><div class="dl-btn-pre">Get it on</div><div class="dl-btn-name">Google Play</div></div>
       </a>
     </div>
-    <p class="hero-note">Free &middot; No ads &middot; No data selling &middot; Ages 13+</p>
+    <p class="hero-note">$0.99 &middot; One purchase &middot; No ads &middot; No data selling &middot; Ages 13+</p>
   </div>
 </section>
 
@@ -305,7 +301,7 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-val" style="color:var(--water);">34</div><div class="stat-label">Active Crisis Zones</div></div>
-      <div class="stat-item"><div class="stat-val" style="color:var(--gold);">10</div><div class="stat-label">Ranking Categories</div></div>
+      <div class="stat-item"><div class="stat-val" style="color:var(--gold);">7</div><div class="stat-label">Conservation Realms</div></div>
       <div class="stat-item"><div class="stat-val" style="color:var(--earth);">5</div><div class="stat-label">Planetary Elements</div></div>
       <div class="stat-item"><div class="stat-val" style="color:var(--primary);">3</div><div class="stat-label">Element Calculators</div></div>
     </div>
@@ -317,17 +313,17 @@
     <div class="section-header">
       <p class="section-eyebrow">Platform Features</p>
       <h2 class="section-title">Everything you need to<br /><span class="gradient-text">take real action</span></h2>
-      <p class="section-desc">Scientific precision tools, global community, and AI-powered insights &mdash; built for the conservation generation.</p>
+      <p class="section-desc">Honest measurement tools and a global community &mdash; built for the conservation generation.</p>
     </div>
     <div class="features-grid">
-      <div class="feature-card water"><div class="feature-icon">&#x1F4A7;</div><h3 class="feature-title">Water Calculator</h3><p class="feature-desc">Precisely measure your household water footprint across showers, laundry, diet, garden, and vehicle use. Every number you enter is a scientifically verifiable data point.</p><div class="feature-tags"><span class="tag tag-water">Gallons Saved</span><span class="tag tag-water">Daily Log</span><span class="tag tag-water">7-Day Trends</span></div></div>
-      <div class="feature-card air"><div class="feature-icon">&#x1F32C;&#xFE0F;</div><h3 class="feature-title">Air &amp; Carbon Calculator</h3><p class="feature-desc">Track your CO&#8322; footprint from transport, energy use, diet, and waste. Understand your contribution to the atmosphere with real-time rank feedback after each entry.</p><div class="feature-tags"><span class="tag tag-air">kg CO&#8322; Reduced</span><span class="tag tag-air">Transport</span><span class="tag tag-air">Energy</span></div></div>
-      <div class="feature-card map"><div class="feature-icon">&#x1F5FA;&#xFE0F;</div><h3 class="feature-title">Interactive Crisis Map</h3><p class="feature-desc">Explore 34 active environmental crises mapped worldwide &mdash; classified by element and severity. Each zone shows a 7-day sparkline trend chart and live community activity heatmap.</p><div class="feature-tags"><span class="tag tag-danger">34 Crisis Zones</span><span class="tag tag-danger">Severity Trends</span><span class="tag tag-danger">Alerts</span></div></div>
+      <div class="feature-card water"><div class="feature-icon">&#x1F4A7;</div><h3 class="feature-title">Water Calculator</h3><p class="feature-desc">Measure your household water footprint across showers, laundry, diet, garden, and vehicle use. Every number you enter is recorded as what it is &mdash; a self-reported measurement.</p><div class="feature-tags"><span class="tag tag-water">Gallons Logged</span><span class="tag tag-water">Daily Log</span><span class="tag tag-water">7-Day Trends</span></div></div>
+      <div class="feature-card air"><div class="feature-icon">&#x1F32C;&#xFE0F;</div><h3 class="feature-title">Air &amp; Carbon Calculator</h3><p class="feature-desc">Track your CO&#8322; footprint from transport, energy use, diet, and waste. Understand your contribution to the atmosphere, with every conversion factor cited in-app.</p><div class="feature-tags"><span class="tag tag-air">kg CO&#8322; Logged</span><span class="tag tag-air">Transport</span><span class="tag tag-air">Energy</span></div></div>
+      <div class="feature-card map"><div class="feature-icon">&#x1F5FA;&#xFE0F;</div><h3 class="feature-title">Interactive Crisis Map</h3><p class="feature-desc">Explore 34 active environmental crises mapped worldwide &mdash; classified by element and severity, each backed by a cited public source.</p><div class="feature-tags"><span class="tag tag-danger">34 Crisis Zones</span><span class="tag tag-danger">Severity Trends</span><span class="tag tag-danger">Cited Sources</span></div></div>
       <div class="feature-card earth"><div class="feature-icon">&#x1F333;</div><h3 class="feature-title">Earth Restoration Calculator</h3><p class="feature-desc">Log tree planting, soil restoration, and land conservation actions. Includes bioregion-specific guides for native species planting across 7 global zones.</p><div class="feature-tags"><span class="tag tag-earth">Trees Planted</span><span class="tag tag-earth">7 Bioregions</span><span class="tag tag-earth">Soil Health</span></div></div>
-      <div class="feature-card ranks"><div class="feature-icon">&#x1F3C6;</div><h3 class="feature-title">Global Leaderboard</h3><p class="feature-desc">See exactly where you rank worldwide, by continent, country, and conservation region. Compete on 10 scientific categories including gallons saved, kg CO&#8322; reduced, and Civilization Score.</p><div class="feature-tags"><span class="tag tag-gold">10 Categories</span><span class="tag tag-gold">4 Geo Tiers</span><span class="tag tag-gold">Top Streaks</span></div></div>
+      <div class="feature-card ranks"><div class="feature-icon">&#x1F4D6;</div><h3 class="feature-title">Your Living Record</h3><p class="feature-desc">Every action you log is appended to your own record with its time, action, and calculation basis. Corrections are new entries &mdash; nothing is silently edited, and your measurements stay private to you.</p><div class="feature-tags"><span class="tag tag-gold">Append-Only</span><span class="tag tag-gold">Private by Default</span><span class="tag tag-gold">Honest Units</span></div></div>
       <div class="feature-card community"><div class="feature-icon">&#x1F91D;</div><h3 class="feature-title">Community Action Feed</h3><p class="feature-desc">Share text updates about conservation actions. Posts are AI-screened before publishing, and photo/video uploads stay disabled until moderated media review ships.</p><div class="feature-tags"><span class="tag tag-primary">AI Moderated</span><span class="tag tag-primary">Region Filter</span><span class="tag tag-primary">Events</span></div></div>
       <div class="feature-card advisor"><div class="feature-icon">&#x1F916;</div><h3 class="feature-title">AI Conservation Advisor</h3><p class="feature-desc">Ask any environmental question and receive expert streaming responses. AI-curated crisis news keeps you informed with urgency-classified headlines.</p><div class="feature-tags"><span class="tag tag-accent">Streaming Q&amp;A</span><span class="tag tag-accent">Crisis News</span><span class="tag tag-accent">Starter Prompts</span></div></div>
-      <div class="feature-card streaks"><div class="feature-icon">&#x1F525;</div><h3 class="feature-title">Daily Streaks &amp; Alerts</h3><p class="feature-desc">Build a daily habit with streak tracking, milestone badges at 7, 30, and 100 days, and smart push notifications. Crisis zone alerts fire instantly when a critical region worsens near you.</p><div class="feature-tags"><span class="tag tag-purple">Streak Badges</span><span class="tag tag-purple">Crisis Alerts</span><span class="tag tag-purple">Weekly Digest</span></div></div>
+      <div class="feature-card streaks"><div class="feature-icon">&#x1F525;</div><h3 class="feature-title">Daily Streaks &amp; Alerts</h3><p class="feature-desc">Build a daily habit with streak tracking, milestone badges for your first action, 30 days, and 100 actions, and smart push notifications. Crisis alerts arrive when a region you follow worsens.</p><div class="feature-tags"><span class="tag tag-purple">Streak Badges</span><span class="tag tag-purple">Crisis Alerts</span><span class="tag tag-purple">Weekly Digest</span></div></div>
     </div>
   </div>
 </section>
@@ -338,12 +334,12 @@
       <div class="science-content">
         <p class="section-eyebrow">Scientific Integrity</p>
         <h2 class="section-title">Real data.<br /><span class="gradient-text">Real impact.</span></h2>
-        <p class="section-desc">Every number on the leaderboard comes from real user input through the in-app calculators &mdash; not estimates, AI guesses, or pre-filled values. Entries are self-reported.</p>
+        <p class="section-desc">Every number in the app comes from real user input through the in-app calculators &mdash; not estimates, AI guesses, or pre-filled values. Entries are self-reported, and they are labeled that way.</p>
         <div class="science-list">
-          <div class="science-item"><div class="science-dot"></div><p class="science-item-text"><strong>Calculator-only metrics</strong> &mdash; gallons, CO&#8322;, trees. Gamification never inflates scientific scores.</p></div>
+          <div class="science-item"><div class="science-dot"></div><p class="science-item-text"><strong>Calculator-only metrics</strong> &mdash; gallons, CO&#8322;, trees. Gamification never inflates measurements.</p></div>
           <div class="science-item"><div class="science-dot" style="background:var(--earth);box-shadow:0 0 6px rgba(21,128,61,0.4);"></div><p class="science-item-text"><strong>Data attribution</strong> &mdash; all statistics sourced from NOAA, WHO, NASA, UN, FAO. Full reference log in-app.</p></div>
           <div class="science-item"><div class="science-dot" style="background:var(--gold-lt);box-shadow:0 0 6px rgba(217,119,6,0.4);"></div><p class="science-item-text"><strong>Offline resilience</strong> &mdash; failed submissions queue locally and auto-retry when connectivity restores.</p></div>
-          <div class="science-item"><div class="science-dot" style="background:var(--danger);box-shadow:0 0 6px rgba(185,28,28,0.4);"></div><p class="science-item-text"><strong>Crisis zone alerts</strong> &mdash; when a critical crisis worsens in your region, you receive an immediate push notification.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--danger);box-shadow:0 0 6px rgba(185,28,28,0.4);"></div><p class="science-item-text"><strong>Crisis zone alerts</strong> &mdash; when a critical crisis worsens in a region you follow, you receive a push notification.</p></div>
         </div>
       </div>
       <div class="crisis-cards">
@@ -352,29 +348,28 @@
         <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Great Barrier Reef Bleaching</div><div class="crisis-stat">91% bleached in 2024 &mdash; 1,500km affected</div></div><span class="crisis-badge badge-high">High</span></div>
         <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Siberian Permafrost Thaw</div><div class="crisis-stat">1.5 trillion tons CO&#8322; equivalent at risk</div></div><span class="crisis-badge badge-high">High</span></div>
         <div class="crisis-card"><div class="crisis-severity sev-medium"></div><div class="crisis-info"><div class="crisis-name">Mediterranean Basin Water Stress</div><div class="crisis-stat">40% below historical 20yr average</div></div><span class="crisis-badge badge-medium">Medium</span></div>
-        <div style="text-align:center;padding:12px 0;"><span style="font-size:12px;color:var(--text-muted);">+ 29 more crisis zones in-app &middot; Updated in real time</span></div>
+        <div style="text-align:center;padding:12px 0;"><span style="font-size:12px;color:var(--text-muted);">+ 29 more crisis zones in-app &middot; every figure cited to its source</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section leaderboard-section" id="leaderboard">
+<section class="section leaderboard-section" id="record">
   <div class="container">
     <div class="section-header">
-      <p class="section-eyebrow">Global Competition</p>
-      <h2 class="section-title">See exactly where<br /><span class="gradient-text">you stand</span></h2>
-      <p class="section-desc">Filter by Global &middot; Continent &middot; Country &middot; Conservation Region. Compete on 10 scientific categories. Every calculator submission updates your live rank.</p>
+      <p class="section-eyebrow">Your Living Record</p>
+      <h2 class="section-title">A record that<br /><span class="gradient-text">stays yours</span></h2>
+      <p class="section-desc">Append-only and private by default. Every row carries its time, action, and calculation basis &mdash; corrections are new entries, never silent edits.</p>
     </div>
     <div class="lb-card">
       <div class="lb-header">
-        <span class="lb-title">&#x1F30D; Global Leaderboard &mdash; Gallons Saved</span>
-        <div class="lb-tier-chips"><span class="lb-chip active">Global</span><span class="lb-chip">Continent</span><span class="lb-chip">Country</span><span class="lb-chip">Region</span></div>
+        <span class="lb-title">&#x1F4D6; Your Record &mdash; sample</span>
+        <div class="lb-tier-chips"><span class="lb-chip active">All</span><span class="lb-chip">Water</span><span class="lb-chip">Air</span><span class="lb-chip">Earth</span></div>
       </div>
-      <div class="lb-row"><div class="lb-rank gold-rank">&#x1F947;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#B45309,#D97706);">AK</div><div class="lb-info"><div class="lb-name">AquaKeeper</div><div class="lb-region">&#x1F1E7;&#x1F1F7; Amazon Basin &middot; South America</div></div><div class="lb-score"><div class="lb-score-val">48,320</div><div class="lb-score-label">gallons saved</div></div></div>
-      <div class="lb-row"><div class="lb-rank silver-rank">&#x1F948;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#0891B2,#0EA5E9);">RG</div><div class="lb-info"><div class="lb-name">RiverGuardian</div><div class="lb-region">&#x1F1EE;&#x1F1F3; Ganges-Brahmaputra &middot; Asia</div></div><div class="lb-score"><div class="lb-score-val">41,850</div><div class="lb-score-label">gallons saved</div></div></div>
-      <div class="lb-row"><div class="lb-rank bronze-rank">&#x1F949;</div><div class="lb-avatar" style="background:linear-gradient(135deg,#15803D,#22C55E);">EW</div><div class="lb-info"><div class="lb-name">EcoWarrior</div><div class="lb-region">&#x1F1FA;&#x1F1F8; Great Lakes Region &middot; North America</div></div><div class="lb-score"><div class="lb-score-val">37,100</div><div class="lb-score-label">gallons saved</div></div></div>
-      <div class="lb-row"><div class="lb-rank">4</div><div class="lb-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">CS</div><div class="lb-info"><div class="lb-name">CoralSaver</div><div class="lb-region">&#x1F1E6;&#x1F1FA; Great Barrier Reef &middot; Oceania</div></div><div class="lb-score"><div class="lb-score-val">29,640</div><div class="lb-score-label">gallons saved</div></div></div>
-      <div class="lb-row"><div class="lb-rank">5</div><div class="lb-avatar" style="background:linear-gradient(135deg,#D97706,#EF4444);">SD</div><div class="lb-info"><div class="lb-name">SahelDefender</div><div class="lb-region">&#x1F1F3;&#x1F1EC; Niger River Basin &middot; Africa</div></div><div class="lb-score"><div class="lb-score-val">24,200</div><div class="lb-score-label">gallons saved</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F4A7;</div><div class="lb-info"><div class="lb-name">Rain barrel installed at the downspout</div><div class="lb-region">Today &middot; self-reported capacity</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F333;</div><div class="lb-info"><div class="lb-name">Native shade tree planted</div><div class="lb-region">Yesterday &middot; species noted, photo attached</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F68C;</div><div class="lb-info"><div class="lb-name">Bus commute logged in place of driving</div><div class="lb-region">Tuesday &middot; conversion factor cited in-app</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F4A7;</div><div class="lb-info"><div class="lb-name">Correction: barrel capacity re-entered</div><div class="lb-region">Tuesday &middot; appended &mdash; nothing overwritten</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
     </div>
   </div>
 </section>
@@ -389,8 +384,8 @@
 <section class="download-section">
   <div class="container">
     <p class="section-eyebrow">Join the Mission</p>
-    <h2 class="section-title">Free. Scientific. Global.</h2>
-    <p class="section-desc" style="margin:16px auto 0;">No ads. No data selling. No estimates. Just real environmental measurements from real people.</p>
+    <h2 class="section-title">One purchase. No ads. No tracking.</h2>
+    <p class="section-desc" style="margin:16px auto 0;">No data selling. No inflated claims. Just real environmental measurements from real people.</p>
     <div class="download-group">
       <a class="dl-btn" href="#" title="Download HumanityU on the App Store" aria-label="Download HumanityU on the App Store">
         <span class="dl-btn-icon"><svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8 1.2C13.8 1.2 15.2 4.8 11.6 6.4C11.6 6.4 10.0 2.8 13.8 1.2Z" fill="#FFFFFF" opacity="0.85"/><path d="M18.4 8.2C17.0 6.6 15.1 5.7 13.2 5.7C11.6 5.7 10.5 6.4 9.6 6.4C8.7 6.4 7.5 5.7 5.8 5.7C3.2 5.7 0.4 7.9 0.4 12.4C0.4 15.2 1.5 18.2 3.0 20.3C4.2 22.1 5.5 23.7 7.2 23.7C8.8 23.7 9.6 22.7 11.5 22.7C13.4 22.7 14.1 23.7 15.8 23.7C17.5 23.7 18.7 22.1 19.9 20.2C20.8 18.9 21.3 17.5 21.5 16.8C19.9 16.1 18.2 14.6 18.2 12.1C18.2 9.9 19.6 8.5 20.4 7.9C19.4 6.5 18.4 8.2 18.4 8.2Z" fill="#FFFFFF"/></svg></span>
@@ -401,7 +396,7 @@
         <div class="dl-btn-text"><div class="dl-btn-pre">Get it on</div><div class="dl-btn-name">Google Play</div></div>
       </a>
     </div>
-    <p style="font-size:12px;color:var(--text-muted);">iOS 16+ &middot; Android 10+ &middot; Ages 13+</p>
+    <p style="font-size:12px;color:var(--text-muted);">$0.99 &middot; iOS 16+ &middot; Android 10+ &middot; Ages 13+</p>
   </div>
 </section>
 
@@ -411,7 +406,7 @@
       <div class="footer-logo"><div class="footer-logo-icon">&#x1F4A7;</div><span class="footer-logo-name">HumanityU</span></div>
       <div class="footer-links">
         <a href="#features">Features</a>
-        <a href="#leaderboard">Leaderboard</a>
+        <a href="#record">Your Record</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="support.html">Support</a>
         <a href="mailto:support@humanityu.app">Contact</a>
