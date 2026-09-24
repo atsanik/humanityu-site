@@ -31,6 +31,8 @@
     li { margin-bottom: 6px; }
     a { color: var(--primary); }
     .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .table-scroll { max-width: 100%; overflow-x: auto; }
+    .table-scroll .data-table { min-width: 620px; }
     .data-table th { background: var(--card); color: var(--text); font-weight: 600; padding: 10px 14px; text-align: left; border: 1px solid var(--border); }
     .data-table td { color: var(--text-sec); padding: 9px 14px; border: 1px solid var(--border); vertical-align: top; }
     .data-table tr:nth-child(even) td { background: var(--card); }
@@ -66,7 +68,7 @@
       </div>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: August 8, 2026 &nbsp;·&nbsp; Effective: August 8, 2026</p>
+    <p class="last-updated">Last updated: September 23, 2026</p>
   </div>
 
   <section>
@@ -79,16 +81,17 @@
   <section>
     <h2><span class="section-num">2</span>Data We Collect</h2>
     <h3>2.1 Account Information</h3>
-    <p>When you create an account: <strong>Email address</strong> (authentication only) and <strong>Username</strong> (display name on community posts).</p>
+    <p>When you create an account, we store your <strong>email address</strong> for authentication and account recovery and your <strong>username</strong> as a display name. You may also choose a region for your profile.</p>
     <h3>2.2 Environmental Measurements</h3>
     <p>When you use calculators, we store measurements you enter (gallons saved, kg CO₂ reduced, trees planted) to build your own impact record. These are figures you report yourself, and we describe them that way wherever they appear.</p>
     <h3>2.3 User-Generated Content</h3>
-    <p>When posting to the Community feed, v1 supports text posts and comments only. Text posts are automatically screened before publication. Photo and video uploads are disabled until moderated media review ships.</p>
+    <p>When you post or comment in the Community feed, we store the text you submit and the associated display name. A post may also contain the region or location text you choose to enter. Posts and comments are screened before publication. Photo and video uploads are disabled in this version.</p>
     <h3>2.4 Usage Data</h3>
-    <p><strong>We collect no usage data at all.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
+    <p>HumanityU does not use an advertising or analytics SDK. Our backend stores limited operational data, including per-user request counts, the endpoint used, and the time window, to enforce rate limits and protect the Service. Service providers may also process standard request metadata. We do not use advertising IDs or cross-app tracking.</p>
     <h3>2.5 Location</h3>
-    <p><strong>HumanityU does not request location permission and does not collect location data of any kind.</strong> If you choose to set a region in your Profile, you select it yourself from a list. Your device's location services are never accessed.</p>
+    <p>HumanityU does not request your device's location permission. You may select a region in your profile or enter location text in a community post; we store those values when you submit them. Map tile requests also reveal the area of the map you view to the tile provider. These are different from collecting your device's GPS location.</p>
     <h3>2.6 Data Collection Summary</h3>
+    <div class="table-scroll" role="region" aria-label="Data collection summary" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Data Type</th><th>Linked to Identity</th><th>Used for Tracking</th><th>Purpose</th></tr></thead>
       <tbody>
@@ -96,21 +99,24 @@
         <tr><td>Username</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Community display name</td></tr>
         <tr><td>Region (self-selected, optional)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Showing content relevant to your area</td></tr>
         <tr><td>Environmental measurements</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Your personal impact record</td></tr>
+        <tr><td>Community content and optional location text</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Community features and safety screening</td></tr>
+        <tr><td>Request rate-limit records</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Abuse prevention and service protection</td></tr>
         
       </tbody>
     </table>
+    </div>
   </section>
 
   <section>
     <h2><span class="section-num">3</span>How We Use Your Data</h2>
     <ul>
       <li><strong>App functionality</strong> — authenticating your account, displaying your impact record, and showing the community feed.</li>
-      <li><strong>Content moderation</strong> — AI-assisted pre-screening of community posts and comments. Post content is processed transiently and not retained by the AI provider.</li>
+      <li><strong>Content moderation</strong> — automated screening of community posts and comments. The screening request can include your display name, content, region, and any location text you submitted. AI gateway retention and training terms are still being verified.</li>
       <li><strong>Push notifications</strong> — streak reminders, milestone alerts, and weekly digests. Disable in Profile → Notification Settings at any time.</li>
       <li><strong>Offline sync</strong> — temporarily caching failed submissions in device local storage for automatic retry.</li>
       
     </ul>
-    <p>We <strong>never</strong> use your data for advertising, profiling, selling to third parties, or any purpose not listed above.</p>
+    <p>We do not sell your data to data brokers or use it for advertising. We also process limited operational records to secure and support the Service.</p>
   </section>
 
   <section>
@@ -122,14 +128,14 @@
       <a class="service-link" href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy →</a>
     </div>
     <div class="service-card">
-      <div class="service-name">Owner-Controlled AI Gateway</div>
+      <div class="service-name">AI Moderation Gateway</div>
       <div class="service-role">AI Content Moderation · Conservation Advisor · Crisis News Curation</div>
-      <p class="service-desc">Provides large language model capabilities for community moderation, the Conservation Advisor Q&amp;A, and crisis news curation through the configured owner-controlled gateway. Text is processed transiently and not retained beyond the immediate request. No personal account data is shared. Inference is performed by Google Gemini models, accessed through a managed API gateway under commercial terms. Prompts are not used to train models.</p>
+      <p class="service-desc">The configured gateway handles community moderation, advisor questions, and crisis news requests. For community moderation, it can receive your display name, submitted content, region, and optional location text. The company operating the configured gateway, model route, retention period, and training terms have not yet been verified. Avoid including sensitive personal information in posts or advisor questions.</p>
     </div>
     <div class="service-card">
       <div class="service-name">OpenTopoMap / OpenStreetMap</div>
       <div class="service-role">Map Tile Rendering</div>
-      <p class="service-desc">The Crisis Map tab loads topographic tiles from OpenTopoMap servers. Tile requests include approximate viewport coordinates — the area of the map you are looking at, which is not your location. No personal identifying information is transmitted. Data is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA 3.0</a>.</p>
+      <p class="service-desc">The Crisis Map tab loads topographic tiles from OpenTopoMap servers. Tile requests include viewport coordinates (the map area you view) and standard network information such as your IP address. Viewport coordinates are not your device's GPS location. Data is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA 3.0</a>.</p>
     </div>
     <div class="service-card">
       <div class="service-name">Apple APNs / Google FCM</div>
@@ -140,14 +146,14 @@
 
   <section>
     <h2><span class="section-num">5</span>Data Sharing &amp; Disclosure</h2>
-    <p>We do not sell, rent, or trade your personal information. We may share data only with sub-processors (Section 4), as required by law, or in a business transfer (with notice and policy continuity guaranteed).</p>
-    <p><strong>What other people can see:</strong> Your username and anything you post to the community feed are visible to other signed-in users. Your email address is never publicly visible. Your environmental measurements are private to you and are not shown to anyone else.</p>
+    <p>We do not sell, rent, or trade your personal information. We may share data with service providers described in Section 4, as required by law, or as part of a business transfer subject to applicable notice requirements.</p>
+    <p><strong>What other people can see:</strong> Your username and the content, region, or location text you choose to post in the community are visible to other signed-in users. The app does not display your account email as a separate public field, but other people can see any personal information you put in your username or posts. Your account-owned environmental measurements are not automatically shared to the community.</p>
   </section>
 
   <section>
     <h2><span class="section-num">6</span>Data Retention &amp; Deletion</h2>
     <table class="data-table">
-      <thead><tr><th>Data Type</th><th>Retention Period</th></tr></thead>
+      <thead><tr><th>Data Type</th><th>Active-Service Retention</th></tr></thead>
       <tbody>
         <tr><td>Account data (email, username)</td><td>Until account deletion</td></tr>
         <tr><td>Environmental measurements</td><td>Until account deletion</td></tr>
@@ -156,8 +162,9 @@
         <tr><td>Offline queue (device-local)</td><td>Cleared on successful sync or manual clear</td></tr>
       </tbody>
     </table>
+    <p>These periods describe active records. Database backups, copies saved on other devices, and service-provider records may remain after an active account is deleted. Exact backup expiry and provider retention periods are still being verified.</p>
     <h3>6.2 Account Deletion</h3>
-    <p>You can delete your account from inside the app, in Profile. Deletion removes your account and all associated data. If you would rather not use the in-app route, email <strong>support@humanityu.app</strong> with the subject "Delete My Account" and we will complete it within <strong>30 days</strong>. You can also delete individual posts and comments within the app at any time.</p>
+    <p>You can delete your account from inside the app, in Profile. The in-app flow deletes your authentication account and linked database records. It does not certify immediate removal from backups, other devices, or external providers. If you would rather not use the in-app route, email <strong>support@humanityu.app</strong> with the subject "Delete My Account"; we will verify the request and report the outcome. You can also delete individual posts and comments within the app at any time.</p>
     <p>You can request an export of your data before deleting — see Section 9.</p>
   </section>
 
@@ -166,15 +173,15 @@
     <ul>
       <li>All data in transit encrypted with TLS 1.2+</li>
       <li>Data at rest encrypted by Supabase managed infrastructure</li>
-      <li>Row-Level Security (RLS) policies ensure users access only their own data</li>
-      <li>Sign-in uses a password together with a one-time code sent to your verified email address</li>
+      <li>Row-Level Security (RLS) policies restrict access to account-owned records and permit community records according to feature visibility</li>
+      <li>Sign-in uses an email address and password; email verification codes are used for registration and account recovery</li>
     </ul>
   </section>
 
   <section>
     <h2><span class="section-num">8</span>Children's Privacy</h2>
     <div class="warning-card"><p>HumanityU is intended for users aged 13 and older. It is <strong>not</strong> directed to children under 13, and we do not knowingly collect personal information from children under 13.</p></div>
-    <p>HumanityU is rated for a teen audience because it includes user-generated content (community posts and comments). Direct messaging is disabled in this version. We collect only email and username — no location, no behavioral tracking, and no advertising. HumanityU is a paid app: a single purchase, with no in-app purchases and nothing further to buy. Text posts are automatically screened before publication; photo and video uploads are disabled until moderated media review ships. If you are a parent or guardian and believe a child under 13 has provided us personal information, contact <strong>support@humanityu.app</strong> and we will delete it promptly.</p>
+    <p>HumanityU is rated for a teen audience because it includes user-generated content (community posts and comments). Direct messaging is disabled in this version. We collect account email and username, optional region or location text, content you submit, and limited operational rate-limit records. We do not use advertising tracking. HumanityU is a paid app: a single purchase, with no in-app purchases and nothing further to buy. Text posts are automatically screened before publication; photo and video uploads are disabled until moderated media review ships. If you are a parent or guardian and believe a child under 13 has provided us personal information, contact <strong>support@humanityu.app</strong> and we will delete it promptly.</p>
   </section>
 
   <section>
@@ -192,17 +199,17 @@
 
   <section>
     <h2><span class="section-num">10</span>Cookies &amp; Tracking Technologies</h2>
-    <p>HumanityU is a mobile application and does not use browser cookies. The app uses <strong>AsyncStorage</strong> (device-local only) for onboarding state, offline submission queue, and notification preferences. This data is never transmitted to third parties. We do not use advertising identifiers, analytics SDKs, or any third-party tracking.</p>
+    <p>HumanityU is a mobile application and does not use browser cookies. The app uses <strong>AsyncStorage</strong> (device-local only) for onboarding state, offline submission queue, and notification preferences. Some locally queued submissions are transmitted to our backend when you choose to sync or the app retries them. We do not use advertising identifiers, analytics SDKs, or any third-party tracking.</p>
   </section>
 
   <section>
     <h2><span class="section-num">11</span>International Data Transfers</h2>
-    <p>Data may be processed in the United States and European Union where our service providers maintain infrastructure. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
+    <p>Data may be processed in the United States and European Union where our service providers maintain infrastructure. We are verifying the applicable transfer mechanisms and provider terms before wider release; contact us if you need details about a particular provider.</p>
   </section>
 
   <section>
     <h2><span class="section-num">12</span>Changes to This Policy</h2>
-    <p>Material changes will be notified via in-app notification or email at least 14 days before they take effect. The "Last updated" date above reflects the most recent revision.</p>
+    <p>We will notify you of material changes by an available in-app or email channel before they take effect, subject to applicable law. The "Last updated" date above reflects the most recent revision.</p>
   </section>
 
   <section>
@@ -217,7 +224,7 @@
       <div class="contact-label">App Website</div>
       <div class="contact-value"><a href="https://humanityu.app" target="_blank">humanityu.app</a></div>
     </div>
-    <p style="margin-top:16px;">We respond to privacy inquiries within <strong>5 business days</strong> and fulfill data requests within <strong>30 days</strong>.</p>
+    <p style="margin-top:16px;">Contact us with privacy requests at the address above. We will handle verified requests under applicable legal deadlines; response time depends on available coverage.</p>
   </section>
 
   <div class="footer">
