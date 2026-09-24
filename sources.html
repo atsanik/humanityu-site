@@ -30,6 +30,8 @@
     li { margin-bottom: 6px; }
     a { color: var(--primary); }
     .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .table-scroll { max-width: 100%; overflow-x: auto; }
+    .table-scroll .data-table { min-width: 620px; }
     .data-table th { background: var(--card); color: var(--text); font-weight: 600; padding: 10px 14px; text-align: left; border: 1px solid var(--border); }
     .data-table td { color: var(--text-sec); padding: 9px 14px; border: 1px solid var(--border); vertical-align: top; }
     .data-table tr:nth-child(even) td { background: var(--card); }
@@ -74,6 +76,7 @@
   <section>
     <h2>Planetary measurements</h2>
     <p>These figures describe conditions on Earth. None of them is produced by HumanityU.</p>
+    <div class="table-scroll" role="region" aria-label="Cited source figures" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Figure</th><th>Value</th><th>Publisher</th><th>Licence</th></tr></thead>
       <tbody>
@@ -87,6 +90,7 @@
         <tr><td>Deforestation</td><td>4.2 million hectares per year</td><td><a href="https://www.fao.org/forest-resources-assessment" target="_blank" rel="noopener">FAO, Forest Resources Assessment 2020</a></td><td>Open access (FAO)</td></tr>
       </tbody>
     </table>
+    </div>
     <p>Additional sources used in regional content include the IUCN Red List, NSIDC, the World Glacier Monitoring Service (Zemp et al. 2019, <em>Nature</em>), Hallmann et al. 2017 (<em>PLOS ONE</em>, CC BY 4.0), Lovejoy &amp; Nobre 2018 (<em>Science Advances</em>), and AIMS reef monitoring.</p>
   </section>
 
