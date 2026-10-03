@@ -1,0 +1,20 @@
+# HumanityU
+
+> HumanityU is a mobile app for iOS and Android that helps people take real action for the planet, starting at home, and keep an honest record of what they did. It is made by Atsanik LLC and sold as a single $2.99 purchase, with no ads, no in-app purchases, no subscriptions and no data selling. Ages 13+.
+
+Store links will be posted on the home page after Apple and Google approve the release.
+
+## Pages
+
+- [Home](https://humanityu.app/): what the app does and its release status
+- [Sources](https://humanityu.app/sources): the public sources and conversion factors behind the numbers in the app
+- [Privacy Policy](https://humanityu.app/privacy): what data the app collects and why
+- [Terms of Service](https://humanityu.app/terms): the terms for using the app
+- [Support](https://humanityu.app/support): help and contact
+- [Status](https://humanityu.app/status): service status and incident history
+- [Child Safety Standards](https://humanityu.app/child-safety)
+- [Delete your account](https://humanityu.app/delete-account)
+
+## Contact
+
+support@humanityu.app
