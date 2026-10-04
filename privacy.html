@@ -70,7 +70,7 @@
       </div>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: October 3, 2026 &nbsp;·&nbsp; Effective: October 3, 2026</p>
+    <p class="last-updated">Last updated: October 4, 2026 &nbsp;·&nbsp; Effective: October 4, 2026</p>
   </div>
 
   <section>
@@ -87,7 +87,7 @@
     <h3>2.2 Environmental Measurements</h3>
     <p>When you use calculators, we store measurements you enter (gallons saved, kg CO₂ reduced, trees planted) to build your own impact record. These are figures you report yourself, and we describe them that way wherever they appear.</p>
     <h3>2.3 User-Generated Content</h3>
-    <p>When posting to the Community feed, v1 supports text posts and comments only. Text posts are automatically screened before publication. Photo and video uploads are disabled until moderated media review ships.</p>
+    <p>When posting to the Community feed, v1 supports text posts and comments only. Text posts are checked by an automatic word filter before publication. Photo and video uploads are disabled until moderated media review ships.</p>
     <h3>2.4 Usage Data</h3>
     <p><strong>We collect no analytics or usage tracking.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
     <h3>2.5 Location</h3>
@@ -101,7 +101,6 @@
         <tr><td>Region (self-selected, optional)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Showing content relevant to your area</td></tr>
         <tr><td>Environmental measurements</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Your personal impact record</td></tr>
         <tr><td>Action report notes and place (optional, typed by you)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Your personal record of what you did and where</td></tr>
-        <tr><td>Your AI screening choice</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Recording whether you agreed to automatic screening of your posts</td></tr>
         <tr><td>Your leaderboard choice (off unless you turn it on)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Whether your name may appear on leaderboards</td></tr>
         <tr><td>Sign-in session records (IP address, device user agent)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Kept by our sign-in provider, Supabase Auth, to secure your account</td></tr>
         <tr><td>Reports and blocks you make</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Community safety and moderation</td></tr>
@@ -114,7 +113,7 @@
     <h2><span class="section-num">3</span>How We Use Your Data</h2>
     <ul>
       <li><strong>App functionality</strong> — authenticating your account, displaying your impact record, and showing the community feed.</li>
-      <li><strong>Content moderation</strong> — AI-assisted pre-screening of community posts and comments. Post content is processed transiently and not retained by the AI provider.</li>
+      <li><strong>Content moderation</strong> — an automatic word filter checks community posts and comments before they are published, and our moderators review reports. Your posts are not sent to any AI service.</li>
       <li><strong>Notifications</strong> — reminders, milestone alerts, and weekly digests, scheduled on your device. Disable in Profile → Notification Settings at any time.</li>
       <li><strong>Offline sync</strong> — temporarily caching failed submissions in device local storage for automatic retry.</li>
       
@@ -129,11 +128,6 @@
       <div class="service-role">Database · Authentication</div>
       <p class="service-desc">Powers our backend database (PostgreSQL) and user authentication. Data is encrypted in transit (TLS 1.2+) and at rest. It is <strong>not</strong> end-to-end encrypted — your community content is processed by our systems for safety moderation and app functionality, and is readable by authorized infrastructure. Supabase is SOC 2 Type II compliant.</p>
       <a class="service-link" href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy →</a>
-    </div>
-    <div class="service-card">
-      <div class="service-name">Vercel AI Gateway · Google Gemini</div>
-      <div class="service-role">AI Content Moderation</div>
-      <p class="service-desc">Provides large language model capabilities for community moderation through the Vercel AI Gateway. You choose in the app whether your posts are screened this way, and you can withdraw that choice in Settings. The Conservation Advisor Q&amp;A and AI crisis news are currently switched off. Text is processed transiently and not retained beyond the immediate request. No personal account data is shared. Inference is performed by Google Gemini models, reached through Vercel AI Gateway under commercial terms. Our requests tell the gateway that prompts must not be used to train models.</p>
     </div>
     <div class="service-card">
       <div class="service-name">OpenTopoMap / OpenStreetMap</div>
@@ -210,7 +204,7 @@
 
   <section>
     <h2><span class="section-num">11</span>International Data Transfers</h2>
-    <p>Your data is stored in the United States (Supabase, US East region). Requests may pass through, and be processed by, our providers' networks in other countries on the way, including content-delivery and edge servers near you, and AI screening runs through the providers named in Section 4. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
+    <p>Your data is stored in the United States (Supabase, US East region). Requests may pass through, and be processed by, our providers' networks in other countries on the way, including content-delivery and edge servers near you. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
   </section>
 
   <section>
