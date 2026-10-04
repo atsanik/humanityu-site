@@ -165,7 +165,7 @@
         
         <tr><td>Offline queue (device-local)</td><td>Cleared on successful sync or manual clear</td></tr>
         <tr><td>Database backups</td><td>Deleted data can remain in our provider's routine backups for a short period, until those backups are replaced</td></tr>
-        <tr><td>Sign-in session records</td><td>Deleted with your account; our provider's own security logs keep them for a limited period, then delete them</td></tr>
+        <tr><td>Sign-in session records</td><td>Deleted with your account. Supabase, which runs our sign-in, keeps its own service logs for security. They may include the email address and IP address used to sign in, and are deleted after a limited period.</td></tr>
       </tbody>
     </table>
     <h3>6.2 Account Deletion</h3>
