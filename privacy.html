@@ -89,7 +89,7 @@
     <h3>2.3 User-Generated Content</h3>
     <p>When posting to the Community feed, v1 supports text posts and comments only. Text posts are automatically screened before publication. Photo and video uploads are disabled until moderated media review ships.</p>
     <h3>2.4 Usage Data</h3>
-    <p><strong>We collect no usage data at all.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
+    <p><strong>We collect no analytics or usage tracking.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
     <h3>2.5 Location</h3>
     <p><strong>HumanityU does not request location permission and never accesses your device's location.</strong> If you choose a region in your Profile (from a list) or type a place into an action report, we store what you enter.</p>
     <h3>2.6 Data Collection Summary</h3>
@@ -102,6 +102,8 @@
         <tr><td>Environmental measurements</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Your personal impact record</td></tr>
         <tr><td>Action report notes and place (optional, typed by you)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Your personal record of what you did and where</td></tr>
         <tr><td>Your AI screening choice</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Recording whether you agreed to automatic screening of your posts</td></tr>
+        <tr><td>Your leaderboard choice (off unless you turn it on)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Whether your name may appear on leaderboards</td></tr>
+        <tr><td>Sign-in session records (IP address, device user agent)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Kept by our sign-in provider, Supabase Auth, to secure your account</td></tr>
         <tr><td>Reports and blocks you make</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Community safety and moderation</td></tr>
         
       </tbody>
@@ -162,6 +164,7 @@
         <tr><td>Community posts &amp; comments</td><td>Until deleted by user or account deletion</td></tr>
         
         <tr><td>Offline queue (device-local)</td><td>Cleared on successful sync or manual clear</td></tr>
+        <tr><td>Database backups</td><td>Deleted data can remain in our provider's routine backups for a short period, until those backups are replaced</td></tr>
       </tbody>
     </table>
     <h3>6.2 Account Deletion</h3>
@@ -206,7 +209,7 @@
 
   <section>
     <h2><span class="section-num">11</span>International Data Transfers</h2>
-    <p>Data may be processed in the United States and European Union where our service providers maintain infrastructure. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
+    <p>Your data is stored in the United States (Supabase, US East region). Requests may pass through, and be processed by, our providers' networks in other countries on the way, including content-delivery and edge servers near you, and AI screening runs through the providers named in Section 4. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
   </section>
 
   <section>
