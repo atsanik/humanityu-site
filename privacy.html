@@ -70,7 +70,7 @@
       </div>
     </div>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: October 4, 2026 &nbsp;·&nbsp; Effective: October 4, 2026</p>
+    <p class="last-updated">Last updated: October 5, 2026 &nbsp;·&nbsp; Effective: October 5, 2026</p>
   </div>
 
   <section>
@@ -89,7 +89,7 @@
     <h3>2.3 User-Generated Content</h3>
     <p>When posting to the Community feed, v1 supports text posts and comments only. Text posts are checked by an automatic word filter before publication. Photo and video uploads are disabled until moderated media review ships.</p>
     <h3>2.4 Usage Data</h3>
-    <p><strong>We collect no analytics or usage tracking.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
+    <p><strong>We collect no analytics or usage tracking.</strong> HumanityU contains no analytics SDK, no crash-reporting SDK, and no telemetry. Errors are handled inside the app and are not transmitted to us or anyone else. To enforce rate limits, our backend keeps a count of your requests to some features, with the feature name and the time window. We do <strong>not</strong> collect device fingerprints, advertising IDs, browsing history, or cross-app tracking data.</p>
     <h3>2.5 Location</h3>
     <p><strong>HumanityU does not request location permission and never accesses your device's location.</strong> If you choose a region in your Profile (from a list) or type a place into an action report, we store what you enter.</p>
     <h3>2.6 Data Collection Summary</h3>
@@ -104,6 +104,7 @@
         <tr><td>Your leaderboard choice (off unless you turn it on)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Whether your name may appear on leaderboards</td></tr>
         <tr><td>Sign-in session records (IP address, device user agent)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Kept by our sign-in provider, Supabase Auth, to secure your account</td></tr>
         <tr><td>Reports and blocks you make</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Community safety and moderation</td></tr>
+        <tr><td>Request rate-limit records (request count, feature, time window)</td><td><span class="badge badge-yes">Yes</span></td><td><span class="badge badge-no">No</span></td><td>Abuse prevention and service protection</td></tr>
         
       </tbody>
     </table>
@@ -132,7 +133,7 @@
     <div class="service-card">
       <div class="service-name">OpenTopoMap / OpenStreetMap</div>
       <div class="service-role">Map Tile Rendering</div>
-      <p class="service-desc">The Crisis Map tab loads topographic tiles from OpenTopoMap servers. Tile requests include approximate viewport coordinates — the area of the map you are looking at, which is not your location. No personal identifying information is transmitted. Data is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA 3.0</a>.</p>
+      <p class="service-desc">The Crisis Map tab loads topographic tiles from OpenTopoMap servers. Tile requests include approximate viewport coordinates — the area of the map you are looking at, which is not your location. As with any web request, the tile servers also see your IP address. No account information is sent. Data is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA 3.0</a>.</p>
     </div>
     <div class="service-card">
       <div class="service-name">Device notifications</div>
@@ -163,7 +164,7 @@
       </tbody>
     </table>
     <h3>6.2 Account Deletion</h3>
-    <p>You can delete your account from inside the app, in Profile. Deletion removes your account and all associated data. If you would rather not use the in-app route, email <strong>support@humanityu.app</strong> with the subject "Delete My Account" and we will complete it within <strong>30 days</strong>. You can also delete individual posts and comments within the app at any time.</p>
+    <p>You can delete your account from inside the app, in Profile. Deletion removes your account and the data linked to it, apart from the limited copies described in the retention table above (a moderator's copy of a reported post until the report is closed, routine backups, and our sign-in provider's security logs). If you would rather not use the in-app route, email <strong>support@humanityu.app</strong> with the subject "Delete My Account" and we will complete it within <strong>30 days</strong>. You can also delete individual posts and comments within the app at any time.</p>
     <p>If someone reports a post or comment you shared, we keep a private copy for our moderators to review, even if you delete it. We delete that copy if the report is dismissed or when you delete your account.</p>
     <p>You can request an export of your data before deleting — see Section 9.</p>
   </section>
@@ -204,7 +205,7 @@
 
   <section>
     <h2><span class="section-num">11</span>International Data Transfers</h2>
-    <p>Your data is stored in the United States (Supabase, US East region). Requests may pass through, and be processed by, our providers' networks in other countries on the way, including content-delivery and edge servers near you. For EEA users, transfers are governed by Standard Contractual Clauses (SCCs) as required by GDPR Article 46.</p>
+    <p>Your data is stored in the United States (Supabase, US East region). Requests may pass through, and be processed by, our providers' networks in other countries on the way, including content-delivery and edge servers near you. If you are in the EEA, the UK or Switzerland, contact us for details of the safeguards that apply to a particular provider.</p>
   </section>
 
   <section>
@@ -227,7 +228,7 @@
       <div class="contact-label">App Website</div>
       <div class="contact-value"><a href="https://humanityu.app" target="_blank">humanityu.app</a></div>
     </div>
-    <p style="margin-top:16px;">We respond to privacy inquiries within <strong>5 business days</strong> and fulfill data requests within <strong>30 days</strong>.</p>
+    <p style="margin-top:16px;">We handle verified data requests within <strong>30 days</strong>. We answer other privacy questions as soon as we can.</p>
   </section>
 
   <div class="footer">
