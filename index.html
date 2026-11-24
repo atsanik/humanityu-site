@@ -10,7 +10,7 @@
   <meta name="description" content="Take real action for the planet, starting at home. Measure your impact on Earth's water, atmosphere, and land systems. Join the global conservation mission." />
   <meta name="theme-color" content="#E0F2FE" />
   <meta property="og:title" content="HumanityU &mdash; Track &middot; Measure &middot; Restore Earth" />
-  <meta property="og:description" content="Take real action for the planet, starting at home. Every action you log stays in your own record, and every zone is backed by a cited source." />
+  <meta property="og:description" content="Take real action for the planet, starting at home. Every action you log stays in your own record." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://humanityu.app" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@
         "applicationCategory": "LifestyleApplication",
         "description": "Take real action for the planet, starting at home. Measure your impact on Earth's water, atmosphere, and land systems.",
         "image": "https://humanityu.app/og-image.jpg",
-        "offers": { "@type": "Offer", "price": "2.99", "priceCurrency": "USD" },
+        "offers": { "@type": "Offer", "price": "2.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "US" } },
         "publisher": { "@id": "https://humanityu.app/#org" }
       }
     ]
@@ -174,7 +174,7 @@
       border-bottom: 1px solid rgba(147,197,253,0.40); padding: 32px 0;
       backdrop-filter: blur(12px); box-shadow: 0 4px 24px rgba(251,191,36,0.08);
     }
-    .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
     .stat-item { text-align: center; padding: 8px 16px; border-right: 1px solid rgba(147,197,253,0.40); }
     .stat-item:last-child { border-right: none; }
     .stat-val { font-size: clamp(24px,3vw,36px); font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; text-shadow: 0 1px 8px rgba(0,0,0,0.08); }
@@ -286,8 +286,7 @@
       .science-grid { grid-template-columns: 1fr; gap: 40px; }
       .stats-grid { grid-template-columns: repeat(2,1fr); }
       .stat-item:nth-child(2) { border-right: none; }
-      .stat-item:nth-child(3) { border-top: 1px solid rgba(147,197,253,0.35); }
-      .stat-item:nth-child(4) { border-top: 1px solid rgba(147,197,253,0.35); border-right: none; }
+      .stat-item:nth-child(3) { border-top: 1px solid rgba(147,197,253,0.35); grid-column: 1 / -1; }
       .lb-tier-chips { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
     }
@@ -323,16 +322,15 @@
     </div>
     <h1><span class="gradient-text">Track. Measure.</span><br />Restore Earth.</h1>
     <p class="hero-sub">Track &middot; Measure &middot; Restore Earth</p>
-    <p class="hero-desc">Log environmental actions across water, atmosphere, and land systems, and explore source-backed estimates. Your personal action record is based on what you report.</p>
+    <p class="hero-desc">Log environmental actions across water, atmosphere, and land systems, and explore estimates. Your personal action record is based on what you report.</p>
     <p class="release-pending" id="download">App Store and Google Play availability will be posted here after each store approves the release.</p>
-    <p class="hero-note">$2.99 &middot; One purchase &middot; No ads &middot; No data selling &middot; Ages 13+</p>
+    <p class="hero-note">$2.99 download in the US (the store shows the price in your country) &middot; Community and Crisis Map by subscription &middot; No ads &middot; No data selling &middot; Ages 18+ &middot; In English</p>
   </div>
 </section>
 
 <div class="stats-bar">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item"><div class="stat-val" style="color:var(--water);">34</div><div class="stat-label">Active Crisis Zones</div></div>
       <div class="stat-item"><div class="stat-val" style="color:var(--gold);">7</div><div class="stat-label">Conservation Realms</div></div>
       <div class="stat-item"><div class="stat-val" style="color:var(--earth);">5</div><div class="stat-label">Planetary Elements</div></div>
       <div class="stat-item"><div class="stat-val" style="color:var(--primary);">3</div><div class="stat-label">Element Calculators</div></div>
@@ -345,15 +343,15 @@
     <div class="section-header">
       <p class="section-eyebrow">Platform Features</p>
       <h2 class="section-title">Everything you need to<br /><span class="gradient-text">take real action</span></h2>
-      <p class="section-desc">Self-reported action logs, source-backed estimates, and a planned community &mdash; built for the conservation generation.</p>
+      <p class="section-desc">Self-reported action logs, estimates, and a community for subscribers &mdash; built for the conservation generation.</p>
     </div>
     <div class="features-grid">
       <div class="feature-card water"><div class="feature-icon">&#x1F4A7;</div><h3 class="feature-title">Water Calculator</h3><p class="feature-desc">Enter information about household water use and explore estimated impact across showers, laundry, diet, garden, and vehicle use. Entries are marked as self-reported.</p><div class="feature-tags"><span class="tag tag-water">Gallons Logged</span><span class="tag tag-water">Daily Log</span><span class="tag tag-water">7-Day Trends</span></div></div>
-      <div class="feature-card air"><div class="feature-icon">&#x1F32C;&#xFE0F;</div><h3 class="feature-title">Air &amp; Carbon Calculator</h3><p class="feature-desc">Track your CO&#8322; footprint from transport, energy use, diet, and waste. Understand your contribution to the atmosphere, with every conversion factor cited in-app.</p><div class="feature-tags"><span class="tag tag-air">kg CO&#8322; Logged</span><span class="tag tag-air">Transport</span><span class="tag tag-air">Energy</span></div></div>
-      <div class="feature-card map"><div class="feature-icon">&#x1F5FA;&#xFE0F;</div><h3 class="feature-title">Interactive Crisis Map</h3><p class="feature-desc">Explore 34 active environmental crises mapped worldwide &mdash; classified by element and severity, each backed by a cited public source.</p><div class="feature-tags"><span class="tag tag-danger">34 Crisis Zones</span><span class="tag tag-danger">Severity Trends</span><span class="tag tag-danger">Cited Sources</span></div></div>
+      <div class="feature-card air"><div class="feature-icon">&#x1F32C;&#xFE0F;</div><h3 class="feature-title">Air &amp; Carbon Calculator</h3><p class="feature-desc">Track your CO&#8322; footprint from transport, energy use, diet, and waste. Understand your contribution to the atmosphere. The results are estimates: some factors come from published sources, others are HumanityU&rsquo;s own rough estimates.</p><div class="feature-tags"><span class="tag tag-air">kg CO&#8322; Logged</span><span class="tag tag-air">Transport</span><span class="tag tag-air">Energy</span></div></div>
+      <div class="feature-card map"><div class="feature-icon">&#x1F5FA;&#xFE0F;</div><h3 class="feature-title">Interactive Crisis Map</h3><p class="feature-desc">Explore environmental crisis zones on a globe, grouped by element and severity. Included with a subscription.</p><div class="feature-tags"><span class="tag tag-danger">Crisis Zones</span><span class="tag tag-danger">Severity Levels</span><span class="tag tag-danger">Element Filter</span></div></div>
       <div class="feature-card earth"><div class="feature-icon">&#x1F333;</div><h3 class="feature-title">Earth Restoration Calculator</h3><p class="feature-desc">Log tree planting, soil restoration, and land conservation actions. Includes bioregion-specific guides for native species planting across 7 global zones.</p><div class="feature-tags"><span class="tag tag-earth">Trees Planted</span><span class="tag tag-earth">7 Bioregions</span><span class="tag tag-earth">Soil Health</span></div></div>
       <div class="feature-card ranks"><div class="feature-icon">&#x1F4D6;</div><h3 class="feature-title">Your Living Record</h3><p class="feature-desc">Every action you log is appended to your own record with its time, action, and calculation basis. Corrections are new entries &mdash; nothing is silently edited, and your measurements stay private to you.</p><div class="feature-tags"><span class="tag tag-gold">Append-Only</span><span class="tag tag-gold">Private by Default</span><span class="tag tag-gold">Honest Units</span></div></div>
-      <div class="feature-card community"><div class="feature-icon">&#x1F91D;</div><h3 class="feature-title">Community Action Feed</h3><p class="feature-desc">Share text updates about conservation actions. Posts are checked by an automatic word filter before publishing, and photo/video uploads stay disabled until moderated media review ships.</p><div class="feature-tags"><span class="tag tag-primary">Moderated</span><span class="tag tag-primary">Region Filter</span><span class="tag tag-primary">Events</span></div></div>
+      <div class="feature-card community"><div class="feature-icon">&#x1F91D;</div><h3 class="feature-title">Community Action Feed</h3><p class="feature-desc">With a subscription, share text updates about conservation actions, comment and like. Posts and comments are checked by an English word filter before they appear, and you can report a post or block a member. Text only: no photo or video uploads and no direct messages.</p><div class="feature-tags"><span class="tag tag-primary">Word Filter</span><span class="tag tag-primary">Region Filter</span><span class="tag tag-primary">Report &amp; Block</span></div></div>
       <div class="feature-card streaks"><div class="feature-icon">&#x1F525;</div><h3 class="feature-title">Milestones &amp; Reminders</h3><p class="feature-desc">Milestone badges for your first action, 30 days with HumanityU, and 100 actions, plus reminders you control.</p><div class="feature-tags"><span class="tag tag-purple">Milestones</span><span class="tag tag-purple">Reminders</span><span class="tag tag-purple">Weekly Digest</span></div></div>
     </div>
   </div>
@@ -365,20 +363,20 @@
       <div class="science-content">
         <p class="section-eyebrow">Scientific Integrity</p>
         <h2 class="section-title">Real data.<br /><span class="gradient-text">Real impact.</span></h2>
-        <p class="section-desc">Calculator results combine information you enter with published conversion factors. The resulting figures are estimates, and your entries are labeled as self-reported.</p>
+        <p class="section-desc">Calculator results combine information you enter with conversion factors, some published and some HumanityU&rsquo;s own rough estimates. The resulting figures are estimates, and your entries are labeled as self-reported.</p>
         <div class="science-list">
           <div class="science-item"><div class="science-dot"></div><p class="science-item-text"><strong>Calculator-only metrics</strong> &mdash; gallons, CO&#8322;, trees. Gamification never inflates measurements.</p></div>
-          <div class="science-item"><div class="science-dot" style="background:var(--earth);box-shadow:0 0 6px rgba(21,128,61,0.4);"></div><p class="science-item-text"><strong>Data attribution</strong> &mdash; all statistics sourced from NOAA, WHO, NASA, UN, FAO. Full reference log in-app.</p></div>
-          <div class="science-item"><div class="science-dot" style="background:var(--gold-lt);box-shadow:0 0 6px rgba(217,119,6,0.4);"></div><p class="science-item-text"><strong>Offline resilience</strong> &mdash; failed submissions queue locally and auto-retry when connectivity restores.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--earth);box-shadow:0 0 6px rgba(21,128,61,0.4);"></div><p class="science-item-text"><strong>Data attribution</strong> &mdash; the main planetary figures come from public sources such as NOAA, NASA, WHO and FAO, listed on our Sources page. Some app figures are HumanityU&rsquo;s own rough estimates.</p></div>
+          <div class="science-item"><div class="science-dot" style="background:var(--gold-lt);box-shadow:0 0 6px rgba(217,119,6,0.4);"></div><p class="science-item-text"><strong>Offline resilience</strong> &mdash; failed submissions queue locally and auto-retry when connectivity is restored.</p></div>
         </div>
       </div>
       <div class="crisis-cards">
-        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">Amazon Basin Deforestation</div><div class="crisis-stat">17&ndash;20% threshold &mdash; 800M people at risk</div></div><span class="crisis-badge badge-critical">Critical</span></div>
-        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">South Asian Groundwater Depletion</div><div class="crisis-stat">600M dependent &mdash; levels falling 1m/year</div></div><span class="crisis-badge badge-critical">Critical</span></div>
-        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Great Barrier Reef Bleaching</div><div class="crisis-stat">91% bleached in 2024 &mdash; 1,500km affected</div></div><span class="crisis-badge badge-high">High</span></div>
-        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Siberian Permafrost Thaw</div><div class="crisis-stat">1.5 trillion tons CO&#8322; equivalent at risk</div></div><span class="crisis-badge badge-high">High</span></div>
-        <div class="crisis-card"><div class="crisis-severity sev-medium"></div><div class="crisis-info"><div class="crisis-name">Mediterranean Basin Water Stress</div><div class="crisis-stat">40% below historical 20yr average</div></div><span class="crisis-badge badge-medium">Medium</span></div>
-        <div style="text-align:center;padding:12px 0;"><span style="font-size:12px;color:var(--text-muted);">+ 29 more crisis zones in-app &middot; every figure cited to its source</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">Amazon Rainforest</div><div class="crisis-stat">17% deforested, 80% tipping point risk</div></div><span class="crisis-badge badge-critical">Critical</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">Great Barrier Reef</div><div class="crisis-stat">91% bleaching rate 2024</div></div><span class="crisis-badge badge-critical">Critical</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-critical"></div><div class="crisis-info"><div class="crisis-name">Siberian Permafrost</div><div class="crisis-stat">20% permafrost thawed</div></div><span class="crisis-badge badge-critical">Critical</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">South Asia</div><div class="crisis-stat">30% groundwater arsenic-affected</div></div><span class="crisis-badge badge-high">High</span></div>
+        <div class="crisis-card"><div class="crisis-severity sev-high"></div><div class="crisis-info"><div class="crisis-name">Mediterranean Basin</div><div class="crisis-stat">1/3 land desertified</div></div><span class="crisis-badge badge-high">High</span></div>
+        <div style="text-align:center;padding:12px 0;"><span style="font-size:12px;color:var(--text-muted);">More crisis zones in the app. The zone figures do not name a source in the app yet; sources for the app&rsquo;s main planetary figures are listed on our <a href="sources.html" style="text-decoration:underline;">Sources</a> page.</span></div>
       </div>
     </div>
   </div>
@@ -397,8 +395,8 @@
         <div class="lb-tier-chips"><span class="lb-chip active">All</span><span class="lb-chip">Water</span><span class="lb-chip">Air</span><span class="lb-chip">Earth</span></div>
       </div>
       <div class="lb-row"><div class="lb-rank">&#x1F4A7;</div><div class="lb-info"><div class="lb-name">Rain barrel installed at the downspout</div><div class="lb-region">Today &middot; self-reported capacity</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
-      <div class="lb-row"><div class="lb-rank">&#x1F333;</div><div class="lb-info"><div class="lb-name">Native shade tree planted</div><div class="lb-region">Yesterday &middot; species noted, photo attached</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
-      <div class="lb-row"><div class="lb-rank">&#x1F68C;</div><div class="lb-info"><div class="lb-name">Bus commute logged in place of driving</div><div class="lb-region">Tuesday &middot; conversion factor cited in-app</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F333;</div><div class="lb-info"><div class="lb-name">Native shade tree planted</div><div class="lb-region">Yesterday &middot; species noted</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
+      <div class="lb-row"><div class="lb-rank">&#x1F68C;</div><div class="lb-info"><div class="lb-name">Bus commute logged in place of driving</div><div class="lb-region">Tuesday &middot; an estimate</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
       <div class="lb-row"><div class="lb-rank">&#x1F4A7;</div><div class="lb-info"><div class="lb-name">Correction: barrel capacity re-entered</div><div class="lb-region">Tuesday &middot; appended &mdash; nothing overwritten</div></div><div class="lb-score"><div class="lb-score-val">Logged</div><div class="lb-score-label">your record</div></div></div>
     </div>
   </div>
@@ -415,9 +413,10 @@
   <div class="container">
     <p class="section-eyebrow">Join the Mission</p>
     <h2 class="section-title">Planned for iOS &amp; Android</h2>
-    <p class="section-desc" style="margin:16px auto 0;">No data selling. No inflated claims. Self-reported actions and source-backed estimates.</p>
+    <p class="section-desc" style="margin:16px auto 0;">No data selling. No inflated claims. Self-reported actions and estimates.</p>
     <p class="release-pending">Store links will appear here after approval. There is no public download link yet.</p>
-    <p style="font-size:12px;color:var(--text-muted);">$2.99 &middot; iOS 16.4+ &middot; Android 10+ &middot; Ages 13+</p>
+    <p style="font-size:12px;color:var(--text-muted);">$2.99 download &middot; Subscription $5 a month or $60 a year for the community and Crisis Map &middot; US prices; the store shows the price in your country &middot; iOS 16.4+ &middot; Android 10+ &middot; Ages 18+</p>
+    <p style="font-size:12px;color:var(--text-muted);">HumanityU is offered in English to adults 18 and over. Availability depends on your country and your app store. It is not offered in the European Union at this time.</p>
   </div>
 </section>
 
@@ -429,6 +428,7 @@
         <a href="#features">Features</a>
         <a href="#record">Your Record</a>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="support.html">Support</a>
         <a href="mailto:support@humanityu.app">Contact</a>
       </div>
