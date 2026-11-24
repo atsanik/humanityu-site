@@ -7,7 +7,7 @@ Store links will be posted on the home page after Apple and Google approve the r
 ## Pages
 
 - [Home](https://humanityu.app/): what the app does and its release status
-- [Sources](https://humanityu.app/sources): the public sources and conversion factors behind the numbers in the app
+- [Sources](https://humanityu.app/sources): the public sources and conversion factors behind the app's main figures, and which factors are HumanityU's own rough estimates
 - [Privacy Policy](https://humanityu.app/privacy): what data the app collects and why
 - [Terms of Service](https://humanityu.app/terms): the terms for using the app
 - [Support](https://humanityu.app/support): help and contact
