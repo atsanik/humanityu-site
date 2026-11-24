@@ -1,6 +1,6 @@
 # HumanityU
 
-> HumanityU is a mobile app for iOS and Android that helps people take real action for the planet, starting at home, and keep an honest record of what they did. It is made by Atsanik LLC. It is a $2.99 download in the United States; the community and the Crisis Map need a subscription ($5 a month or $60 a year in the United States, renewing until canceled in the store's settings). In other countries the store shows the price in the local currency. No ads and no data selling. It is offered in English to adults 18 and over. Availability depends on the country and the app store; it is not offered in the European Union at this time.
+> HumanityU is a mobile app for iOS and Android that helps people take real action for the planet, starting at home, and keep an honest record of what they did. It is made by Atsanik LLC. It is a $2.99 download in the United States; the community and the Crisis Map need a subscription ($5 a month or $60 a year in the United States, renewing until canceled in the store's settings). In other countries the store shows the price in the local currency. No ads and no data selling. It is offered in English to adults 18 and over. Availability depends on the country and the app store; it is not offered in the European Economic Area (the European Union, Iceland, Liechtenstein and Norway) at this time.
 
 Store links will be posted on the home page after Apple and Google approve the release.
 
